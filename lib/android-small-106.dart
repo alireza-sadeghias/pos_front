@@ -1,16 +1,10 @@
-import 'dart:ui';
-
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';import 'package:logger/logger.dart';
-import 'package:pos/ui/token/colors.dart';
-import 'package:pos/ui/token/colors.dart';
+import 'package:logger/logger.dart';
 import 'package:pos/ui/token/font.dart';
-
-import 'utils.dart';
+import 'package:pos/ui/token/pos_colors.dart';
 var logger = Logger(printer: LogfmtPrinter());
 class Scene extends StatelessWidget {
-  @override
+  const Scene({super.key});@override
   Widget build(BuildContext context) {
     double baseWidth = 360;
     double fem = MediaQuery.of(context).size.width / baseWidth;
@@ -62,8 +56,8 @@ class Scene extends StatelessWidget {
                             child: Text(
                               'دکتر مریم محمودی',
                               textAlign: TextAlign.right,
-                              style: SafeGoogleFont (
-                                'IRANSansXFaNum',
+                              style: TextStyle (
+                      fontFamily:         'IRANSans',
                                 fontSize: 14*ffem,
                                 fontWeight: FontWeight.w600,
                                 height: 1.2575*ffem/fem,
@@ -75,8 +69,8 @@ class Scene extends StatelessWidget {
                             // YPT (I5812:106150;5812:106903)
                             'متخصص زنان زایمان',
                             textAlign: TextAlign.right,
-                            style: SafeGoogleFont (
-                              'IRANSansXFaNum',
+                            style: TextStyle (
+                      fontFamily:       'IRANSans',
                               fontSize: 14*ffem,
                               fontWeight: FontWeight.w500,
                               height: 1.2575*ffem/fem,
@@ -107,11 +101,11 @@ class Scene extends StatelessWidget {
                 'تنظیمات',
                 textAlign: TextAlign.right,
                 style: SafeGoogleFont (
-                  'IRANSansXFaNum',
+                  'IRANSans',
                   fontSize: 14*ffem,
                   fontWeight: FontWeight.w600,
                   height: 1.2575*ffem/fem,
-                  color: Color(0xffef4023),
+                  color: PosColors.vermilion,
                 ),
               ),
             ),
@@ -128,8 +122,8 @@ class Scene extends StatelessWidget {
                     child: Text(
                       'تعریف خدمات و تعرفه ها',
                       textAlign: TextAlign.right,
-                      style: SafeGoogleFont (
-                        'IRANSansXFaNum',
+                      style: TextStyle (
+                      fontFamily: 'IRANSans',
                         fontSize: 14*ffem,
                         fontWeight: FontWeight.w600,
                         height: 1.2575*ffem/fem,
@@ -157,7 +151,7 @@ class Scene extends StatelessWidget {
                 'نام',
                 textAlign: TextAlign.right,
                 style: SafeGoogleFont (
-                  'IRANSansXFaNum',
+                  'IRANSans',
                   fontSize: 14*ffem,
                   fontWeight: FontWeight.w500,
                   height: 1.2575*ffem/fem,
@@ -209,8 +203,8 @@ class Scene extends StatelessWidget {
                         child: Text(
                           'تعرفه',
                           textAlign: TextAlign.right,
-                          style: SafeGoogleFont (
-                            'IRANSansXFaNum',
+                          style: TextStyle (
+                      fontFamily:     'IRANSans',
                             fontSize: 14*ffem,
                             fontWeight: FontWeight.w500,
                             height: 1.2575*ffem/fem,
@@ -241,8 +235,8 @@ class Scene extends StatelessWidget {
                             margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 263*fem, 16*fem),
                             child: RichText(
                               text: TextSpan(
-                                style: SafeGoogleFont (
-                                  'IRANSansXFaNum',
+                                style: TextStyle (
+                      fontFamily:           'IRANSans',
                                   fontSize: 14*ffem,
                                   fontWeight: FontWeight.w500,
                                   height: 1.5*ffem/fem,
@@ -251,8 +245,8 @@ class Scene extends StatelessWidget {
                                 children: [
                                   TextSpan(
                                     text: 'X1Y',
-                                    style: SafeGoogleFont (
-                                      'IRANSansXFaNum',
+                                    style: TextStyle (
+                      fontFamily:               'IRANSans',
                                       fontSize: 14*ffem,
                                       fontWeight: FontWeight.w500,
                                       height: 1.2575*ffem/fem,
@@ -261,8 +255,8 @@ class Scene extends StatelessWidget {
                                   ),
                                   TextSpan(
                                     text: '21',
-                                    style: SafeGoogleFont (
-                                      'IRANSansXFaNum',
+                                    style: TextStyle (
+                      fontFamily:               'IRANSans',
                                       fontSize: 14*ffem,
                                       fontWeight: FontWeight.w500,
                                       height: 1.2575*ffem/fem,
@@ -288,8 +282,8 @@ class Scene extends StatelessWidget {
                             child: RichText(
                               textAlign: TextAlign.right,
                               text: TextSpan(
-                                style: SafeGoogleFont (
-                                  'IRANSansXFaNum',
+                                style: TextStyle (
+                      fontFamily:           'IRANSans',
                                   fontSize: 14*ffem,
                                   fontWeight: FontWeight.w600,
                                   height: 1.2575*ffem/fem,
@@ -301,8 +295,8 @@ class Scene extends StatelessWidget {
                                   ),
                                   TextSpan(
                                     text: 'X1Y',
-                                    style: SafeGoogleFont (
-                                      'IRANSansXFaNum',
+                                    style: TextStyle (
+                      fontFamily:               'IRANSans',
                                       fontSize: 14*ffem,
                                       fontWeight: FontWeight.w400,
                                       height: 1.2575*ffem/fem,
@@ -329,8 +323,8 @@ class Scene extends StatelessWidget {
                             child: Text(
                               'نتیجه ای یافت نشد!',
                               textAlign: TextAlign.right,
-                              style: SafeGoogleFont (
-                                'IRANSansXFaNum',
+                              style: TextStyle (
+                      fontFamily:         'IRANSans',
                                 fontSize: 14*ffem,
                                 fontWeight: FontWeight.w500,
                                 height: 1.2575*ffem/fem,
@@ -358,8 +352,8 @@ class Scene extends StatelessWidget {
                                   child: Text(
                                     'اضافه کردن ',
                                     textAlign: TextAlign.center,
-                                    style: SafeGoogleFont (
-                                      'IRANSansXFaNum',
+                                    style: TextStyle (
+                      fontFamily:               'IRANSans',
                                       fontSize: 14*ffem,
                                       fontWeight: FontWeight.w500,
                                       height: 1.2575*ffem/fem,
@@ -390,7 +384,7 @@ class Scene extends StatelessWidget {
                   'تایید',
                   textAlign: TextAlign.right,
                   style: SafeGoogleFont (
-                    'IRANSansXFaNum',
+                    'IRANSans',
                     fontSize: 16*ffem,
                     fontWeight: FontWeight.w700,
                     height: 1.2575*ffem/fem,

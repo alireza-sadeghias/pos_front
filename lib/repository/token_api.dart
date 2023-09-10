@@ -11,8 +11,6 @@ import 'exceptions.dart';
 typedef UserTokenSupplier = Future<String?> Function();
 
 class TokenApi {
-  // static const _errorCodeJsonKey = 'error_code';
-  // static const _errorMessageJsonKey = 'message';
 
   final UserSecureStorage _secureStorage = const UserSecureStorage();
 
@@ -21,15 +19,6 @@ class TokenApi {
     @visibleForTesting TokenUrlBuilder? urlBuilder,
   })  : _dio = dio ?? Dio(),
         _urlBuilder = const TokenUrlBuilder() {
-    // _dio.interceptors.add(
-    //   InterceptorsWrapper(
-    //     onRequest: (options, handler) async {
-    //       String? userToken = await getUserToken();
-    //       handler.
-    //       return handler.next(options);
-    //     },
-    //   ),
-    // );
     _dio.interceptors.add(
       LogInterceptor(responseBody: false),
     );
@@ -53,12 +42,6 @@ class TokenApi {
       throw NotSuccessfulException();
     }
 
-
-    // await _secureStorage.upsertUserInfo(
-    //   username: apiUser.username,
-    //   email: apiUser.email,
-    //   token: apiUser.token,
-    // );
 
     final info = wrapper.info.first;
     final dto = TokenDto.fromJson(info);

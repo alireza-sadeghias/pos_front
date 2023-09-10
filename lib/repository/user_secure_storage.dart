@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:ffi';
 
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:pos/repository/model/response/token_dto.dart';

@@ -1,21 +1,16 @@
-import 'package:equatable/equatable.dart';
-
 part of 'token_cubit.dart';
 
-
-class SignInState extends Equatable {
-
+class TokenState extends Equatable {
   final SubmissionStatus submissionStatus;
 
-  const SignInState({
+  const TokenState({
     this.submissionStatus = SubmissionStatus.idle,
   });
 
-
-@override
-List<Object?> get props => [
-  submissionStatus,
-];
+  @override
+  List<Object?> get props => [
+        submissionStatus,
+      ];
 }
 
 enum SubmissionStatus {

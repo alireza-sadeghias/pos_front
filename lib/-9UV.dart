@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';import 'package:logger/logger.dart';
-import 'package:pos/ui/token/colors.dart';
+import 'package:pos/ui/token/pos_colors.dart';
 import 'dart:ui';
 import 'package:pos/ui/token/font.dart';
 
 var logger = Logger(printer: LogfmtPrinter());
 class Scene extends StatelessWidget {
+  
+  const Scene({super.key});
+
   @override
   Widget build(BuildContext context) {
     double baseWidth = 873;
@@ -20,7 +23,7 @@ class Scene extends StatelessWidget {
           'سایر خدمات',
           textAlign: TextAlign.center,
           style: SafeGoogleFont (
-            'IRANSansXFaNum',
+            'IRANSans',
             fontSize: 149*ffem,
             fontWeight: FontWeight.w600,
             height: 1.2575*ffem/fem,

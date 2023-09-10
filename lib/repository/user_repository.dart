@@ -3,7 +3,6 @@ import 'package:pos/repository/user_api.dart';
 import 'package:pos/repository/user_secure_storage.dart';
 import 'package:rxdart/rxdart.dart';
 
-import '../data_models/user.dart';
 import 'exceptions.dart';
 
 class UserRepository {

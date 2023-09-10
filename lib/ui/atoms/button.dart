@@ -13,11 +13,11 @@ class Button extends StatelessWidget {
     this.fontSize,
     this.height = 32,
     this.width=400,
-    this.textAlign,
+    this.textAlign = TextAlign.right,
     this.borderRadius,
     this.isEnabled = false,
   }) : super(key: key);
-  VoidCallback? onPressed;
+  final VoidCallback? onPressed;
   final String? text;
   final double? size;
   final double? fontSize;
@@ -25,13 +25,13 @@ class Button extends StatelessWidget {
   final double width;
   final Color? color;
   final Color? backgroundColor;
-  bool isEnabled;
+  final bool isEnabled;
   final BorderRadius? borderRadius;
-  TextAlign? textAlign = TextAlign.right;
+  final TextAlign? textAlign;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: width,
       height: height,
       // decoration: BoxDecoration(
@@ -47,7 +47,7 @@ class Button extends StatelessWidget {
             text!,
             textAlign: textAlign,
             style: SafeGoogleFont(
-              'IRANSansXFaNum',
+              'IRANSans',
               fontSize: fontSize,
               fontWeight: FontWeight.w700,
               height: 1,

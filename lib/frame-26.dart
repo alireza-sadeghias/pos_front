@@ -1,15 +1,10 @@
-import 'package:flutter/material.dart';import 'package:logger/logger.dart';
-import 'package:pos/ui/token/colors.dart';
-import 'package:flutter/gestures.dart';
-import 'dart:ui';
-import 'package:google_fonts/google_fonts.dart';
-
-
-import 'utils.dart';
+import 'package:flutter/material.dart';
+import 'package:logger/logger.dart';
 import 'package:pos/ui/token/font.dart';
+import 'package:pos/ui/token/pos_colors.dart';
 var logger = Logger(printer: LogfmtPrinter());
 class Scene extends StatelessWidget {
-  @override
+  const Scene({super.key});@override
   Widget build(BuildContext context) {
     double baseWidth = 302;
     double fem = MediaQuery.of(context).size.width / baseWidth;
@@ -76,8 +71,8 @@ class Scene extends StatelessWidget {
                         child: Text(
                           'دکتر مریم محمودی',
                           textAlign: TextAlign.right,
-                          style: SafeGoogleFont (
-                            'IRANSansXFaNum',
+                          style: TextStyle (
+                      fontFamily:     'IRANSans',
                             fontSize: 14*ffem,
                             fontWeight: FontWeight.w600,
                             height: 1.2575*ffem/fem,
@@ -98,8 +93,8 @@ class Scene extends StatelessWidget {
                         child: Text(
                           'متخصص زنان زایمان',
                           textAlign: TextAlign.right,
-                          style: SafeGoogleFont (
-                            'IRANSansXFaNum',
+                          style: TextStyle (
+                      fontFamily:     'IRANSans',
                             fontSize: 13*ffem,
                             fontWeight: FontWeight.w600,
                             height: 1.2575*ffem/fem,
@@ -120,8 +115,8 @@ class Scene extends StatelessWidget {
                         child: Text(
                           'از دانشگاه علوم پزشکی شهید بهشتی',
                           textAlign: TextAlign.right,
-                          style: SafeGoogleFont (
-                            'IRANSansXFaNum',
+                          style: TextStyle (
+                      fontFamily:     'IRANSans',
                             fontSize: 13*ffem,
                             fontWeight: FontWeight.w600,
                             height: 1.2575*ffem/fem,
@@ -154,8 +149,8 @@ class Scene extends StatelessWidget {
                                   child: Text(
                                     'اقلام نسخه',
                                     textAlign: TextAlign.right,
-                                    style: SafeGoogleFont (
-                                      'IRANSansXFaNum',
+                                    style: TextStyle (
+                      fontFamily:               'IRANSans',
                                       fontSize: 14*ffem,
                                       fontWeight: FontWeight.w600,
                                       height: 1.2575*ffem/fem,
@@ -172,8 +167,8 @@ class Scene extends StatelessWidget {
                                   child: Text(
                                     'ACETAMINOPHEN (PARCETAMOL) ORAL SUSP 120 mg/5 ml',
                                     textAlign: TextAlign.right,
-                                    style: SafeGoogleFont (
-                                      'IRANSansXFaNum',
+                                    style: TextStyle (
+                      fontFamily:               'IRANSans',
                                       fontSize: 14*ffem,
                                       fontWeight: FontWeight.w500,
                                       height: 1.2575*ffem/fem,
@@ -193,8 +188,8 @@ class Scene extends StatelessWidget {
                                         child: Text(
                                           'هر 4 ساعت',
                                           textAlign: TextAlign.right,
-                                          style: SafeGoogleFont (
-                                            'IRANSansXFaNum',
+                                          style: TextStyle (
+                      fontFamily:                     'IRANSans',
                                             fontSize: 14*ffem,
                                             fontWeight: FontWeight.w500,
                                             height: 1.2575*ffem/fem,
@@ -215,8 +210,8 @@ class Scene extends StatelessWidget {
                                         // Yem (5812:107150)
                                         'مقدار تجویز: 2 ورق',
                                         textAlign: TextAlign.right,
-                                        style: SafeGoogleFont (
-                                          'IRANSansXFaNum',
+                                        style: TextStyle (
+                      fontFamily:                   'IRANSans',
                                           fontSize: 14*ffem,
                                           fontWeight: FontWeight.w500,
                                           height: 1.2575*ffem/fem,
@@ -247,8 +242,8 @@ class Scene extends StatelessWidget {
                             child: Text(
                               'ACETAMINOPHEN (PARCETAMOL) ORAL SUSP 120 mg/5 ml',
                               textAlign: TextAlign.right,
-                              style: SafeGoogleFont (
-                                'IRANSansXFaNum',
+                              style: TextStyle (
+                      fontFamily:         'IRANSans',
                                 fontSize: 14*ffem,
                                 fontWeight: FontWeight.w500,
                                 height: 1.2575*ffem/fem,
@@ -267,8 +262,8 @@ class Scene extends StatelessWidget {
                                   child: Text(
                                     'هر 4 ساعت',
                                     textAlign: TextAlign.right,
-                                    style: SafeGoogleFont (
-                                      'IRANSansXFaNum',
+                                    style: TextStyle (
+                      fontFamily:               'IRANSans',
                                       fontSize: 14*ffem,
                                       fontWeight: FontWeight.w500,
                                       height: 1.2575*ffem/fem,
@@ -289,8 +284,8 @@ class Scene extends StatelessWidget {
                                   // 5wX (5812:107154)
                                   'مقدار تجویز: 2 عدد',
                                   textAlign: TextAlign.right,
-                                  style: SafeGoogleFont (
-                                    'IRANSansXFaNum',
+                                  style: TextStyle (
+                      fontFamily:             'IRANSans',
                                     fontSize: 14*ffem,
                                     fontWeight: FontWeight.w500,
                                     height: 1.2575*ffem/fem,
@@ -324,8 +319,8 @@ class Scene extends StatelessWidget {
                     child: Text(
                       'خدمات ارائه شده',
                       textAlign: TextAlign.right,
-                      style: SafeGoogleFont (
-                        'IRANSansXFaNum',
+                      style: TextStyle (
+                      fontFamily: 'IRANSans',
                         fontSize: 14*ffem,
                         fontWeight: FontWeight.w600,
                         height: 1.2575*ffem/fem,
@@ -352,8 +347,8 @@ class Scene extends StatelessWidget {
                                 margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 112*fem, 0*fem),
                                 child: Text(
                                   '3,60,000 ریال',
-                                  style: SafeGoogleFont (
-                                    'IRANSansXFaNum',
+                                  style: TextStyle (
+                      fontFamily:             'IRANSans',
                                     fontSize: 14*ffem,
                                     fontWeight: FontWeight.w600,
                                     height: 1.2575*ffem/fem,
@@ -365,8 +360,8 @@ class Scene extends StatelessWidget {
                                 // Ak1 (5812:107132)
                                 'اندومتریوز',
                                 textAlign: TextAlign.right,
-                                style: SafeGoogleFont (
-                                  'IRANSansXFaNum',
+                                style: TextStyle (
+                      fontFamily:           'IRANSans',
                                   fontSize: 14*ffem,
                                   fontWeight: FontWeight.w600,
                                   height: 1.2575*ffem/fem,
@@ -397,8 +392,8 @@ class Scene extends StatelessWidget {
                                 margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 118*fem, 0*fem),
                                 child: Text(
                                   '2,500,000 ریال',
-                                  style: SafeGoogleFont (
-                                    'IRANSansXFaNum',
+                                  style: TextStyle (
+                      fontFamily:             'IRANSans',
                                     fontSize: 14*ffem,
                                     fontWeight: FontWeight.w600,
                                     height: 1.2575*ffem/fem,
@@ -410,8 +405,8 @@ class Scene extends StatelessWidget {
                                 // t3j (5812:107135)
                                 'فیبروئید',
                                 textAlign: TextAlign.right,
-                                style: SafeGoogleFont (
-                                  'IRANSansXFaNum',
+                                style: TextStyle (
+                      fontFamily:           'IRANSans',
                                   fontSize: 14*ffem,
                                   fontWeight: FontWeight.w600,
                                   height: 1.2575*ffem/fem,
@@ -442,8 +437,8 @@ class Scene extends StatelessWidget {
                                 margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 119*fem, 0*fem),
                                 child: Text(
                                   '2,500,000 ریال',
-                                  style: SafeGoogleFont (
-                                    'IRANSansXFaNum',
+                                  style: TextStyle (
+                      fontFamily:             'IRANSans',
                                     fontSize: 14*ffem,
                                     fontWeight: FontWeight.w600,
                                     height: 1.2575*ffem/fem,
@@ -455,8 +450,8 @@ class Scene extends StatelessWidget {
                                 // 2ZF (5812:107139)
                                 'ناباروری',
                                 textAlign: TextAlign.right,
-                                style: SafeGoogleFont (
-                                  'IRANSansXFaNum',
+                                style: TextStyle (
+                      fontFamily:           'IRANSans',
                                   fontSize: 14*ffem,
                                   fontWeight: FontWeight.w600,
                                   height: 1.2575*ffem/fem,
@@ -486,8 +481,8 @@ class Scene extends StatelessWidget {
                                 margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 88*fem, 0*fem),
                                 child: Text(
                                   '8,600,000 ریال',
-                                  style: SafeGoogleFont (
-                                    'IRANSansXFaNum',
+                                  style: TextStyle (
+                      fontFamily:             'IRANSans',
                                     fontSize: 14*ffem,
                                     fontWeight: FontWeight.w600,
                                     height: 1.2575*ffem/fem,
@@ -499,8 +494,8 @@ class Scene extends StatelessWidget {
                                 // yN1 (5812:107140)
                                 'مجموع قیمت',
                                 textAlign: TextAlign.right,
-                                style: SafeGoogleFont (
-                                  'IRANSansXFaNum',
+                                style: TextStyle (
+                      fontFamily:           'IRANSans',
                                   fontSize: 14*ffem,
                                   fontWeight: FontWeight.w600,
                                   height: 1.2575*ffem/fem,
@@ -528,7 +523,7 @@ class Scene extends StatelessWidget {
                 'آزمایشات',
                 textAlign: TextAlign.right,
                 style: SafeGoogleFont (
-                  'IRANSansXFaNum',
+                  'IRANSans',
                   fontSize: 14*ffem,
                   fontWeight: FontWeight.w600,
                   height: 1.2575*ffem/fem,
@@ -546,7 +541,7 @@ class Scene extends StatelessWidget {
                 'شمارش سلول های خون(هموگلوبين، هماتوكريت، شمارش گلبول قرمز و سفيد و پلاكت، انديس‌هاي سلولي) و شمارش افتراقي گلبولهاي سفيد',
                 textAlign: TextAlign.right,
                 style: SafeGoogleFont (
-                  'IRANSansXFaNum',
+                  'IRANSans',
                   fontSize: 14*ffem,
                   fontWeight: FontWeight.w500,
                   height: 1.7142857143*ffem/fem,
@@ -577,8 +572,8 @@ class Scene extends StatelessWidget {
                           child: Text(
                             '2. آزمایش کامل ادرار با استفاده از نوار ادراری یا \n    قرص‌های دارویی برای تعیین قند، هموگلوبین \n    کتون‌ها، لوکوسیت‌ها، نیتریت، PH، وزن  \n    مخصوص، اوروبیلینوژن و غیره به صورت \n    ماکروسکوپی با یا بدون استفاده از دستگاه \n    خودکار شامل گزارش ویژگی های ماکروسکوپی \n   و تجسس میکروسکوپی',
                             textAlign: TextAlign.right,
-                            style: SafeGoogleFont (
-                              'IRANSansXFaNum',
+                            style: TextStyle (
+                      fontFamily:       'IRANSans',
                               fontSize: 14*ffem,
                               fontWeight: FontWeight.w500,
                               height: 1.7142857143*ffem/fem,
@@ -595,8 +590,8 @@ class Scene extends StatelessWidget {
                     child: Text(
                       'مبلغ قابل پرداخت',
                       textAlign: TextAlign.right,
-                      style: SafeGoogleFont (
-                        'IRANSansXFaNum',
+                      style: TextStyle (
+                      fontFamily: 'IRANSans',
                         fontSize: 14*ffem,
                         fontWeight: FontWeight.w600,
                         height: 1.2575*ffem/fem,
@@ -626,8 +621,8 @@ class Scene extends StatelessWidget {
                     child: Text(
                       'نشانی:آیت الله کاشانی ، بلوار اباذر، درمانگاه پیامبر جنب پمپ بنزین پیامبر',
                       textAlign: TextAlign.right,
-                      style: SafeGoogleFont (
-                        'IRANSansXFaNum',
+                      style: TextStyle (
+                      fontFamily: 'IRANSans',
                         fontSize: 13*ffem,
                         fontWeight: FontWeight.w600,
                         height: 1.2575*ffem/fem,
@@ -641,8 +636,8 @@ class Scene extends StatelessWidget {
                     child: Text(
                       'تلفن مطب: 44362596-021 / 44443625-021',
                       textAlign: TextAlign.right,
-                      style: SafeGoogleFont (
-                        'IRANSansXFaNum',
+                      style: TextStyle (
+                      fontFamily: 'IRANSans',
                         fontSize: 14*ffem,
                         fontWeight: FontWeight.w500,
                         height: 1.7142857143*ffem/fem,

@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pos/ui/atoms/label.dart';
-import 'package:pos/ui/token/font.dart';
 import 'package:pos/ui/token/logos.dart';
-
-import '../token/colors.dart';
 
 class HeaderInfo extends StatelessWidget {
   const HeaderInfo({super.key});

@@ -1,19 +1,12 @@
-import 'package:flutter/material.dart';import 'package:logger/logger.dart';
-import 'package:pos/ui/token/colors.dart';
-import 'package:flutter/gestures.dart';
-import 'dart:ui';
-import 'package:google_fonts/google_fonts.dart';
-
-
-import 'utils.dart';
-import 'package:pos/ui/token/font.dart';
+import 'package:flutter/material.dart';
+import 'package:logger/logger.dart';
+import 'package:pos/ui/token/pos_colors.dart';
 var logger = Logger(printer: LogfmtPrinter());
 class Scene extends StatelessWidget {
-  @override
+  const Scene({super.key});@override
   Widget build(BuildContext context) {
     double baseWidth = 360;
     double fem = MediaQuery.of(context).size.width / baseWidth;
-    double ffem = fem * 0.97;
     return Container(
       width: double.infinity,
       child: TextButton(
@@ -27,7 +20,7 @@ class Scene extends StatelessWidget {
           width: double.infinity,
           height: 640*fem,
           decoration: BoxDecoration (
-            color: Color(0xffef4023),
+            color: PosColors.vermilion,
           ),
           child: Center(
             // d5001gcy (5812:105326)
@@ -35,7 +28,7 @@ class Scene extends StatelessWidget {
               width: 157*fem,
               height: 165*fem,
               child: Image.asset(
-                'assets/pos-final/images/d-500-1-5S1.png',
+                'assets/pos-final/images/logo.png',
                 fit: BoxFit.cover,
               ),
             ),
