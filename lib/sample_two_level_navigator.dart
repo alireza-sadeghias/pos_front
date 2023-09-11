@@ -62,12 +62,14 @@ class SetupFlow extends StatefulWidget {
 
   final String setupPageRoute;
 
+
   @override
   SetupFlowState createState() => SetupFlowState();
 }
 
 class SetupFlowState extends State<SetupFlow> {
   final _navigatorKey = GlobalKey<NavigatorState>();
+
 
   @override
   void initState() {
@@ -124,6 +126,7 @@ class SetupFlowState extends State<SetupFlow> {
   void _exitSetup() {
     Navigator.of(context).pop();
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -194,6 +197,7 @@ class SelectDevicePage extends StatelessWidget {
 
   final void Function(String deviceId) onDeviceSelected;
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -246,11 +250,13 @@ class WaitingPage extends StatefulWidget {
   final String message;
   final VoidCallback onWaitComplete;
 
+
   @override
   State<WaitingPage> createState() => _WaitingPageState();
 }
 
 class _WaitingPageState extends State<WaitingPage> {
+
   @override
   void initState() {
     super.initState();
@@ -264,6 +270,7 @@ class _WaitingPageState extends State<WaitingPage> {
       widget.onWaitComplete();
     }
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -292,6 +299,7 @@ class FinishedPage extends StatelessWidget {
   });
 
   final VoidCallback onFinishPressed;
+
 
   @override
   Widget build(BuildContext context) {
@@ -362,6 +370,7 @@ class HomeScreen extends StatelessWidget {
     super.key,
   });
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -428,6 +437,7 @@ class SettingsScreen extends StatelessWidget {
   const SettingsScreen({
     super.key,
   });
+
 
   @override
   Widget build(BuildContext context) {

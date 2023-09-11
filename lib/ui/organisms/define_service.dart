@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:logger/logger.dart';
 import 'package:pos/ui/foundation/text_style.dart';
-import 'package:pos/ui/molecules/price_text_field.dart';
+import 'package:pos/ui/molecules/price_widgets.dart';
 import 'package:pos/ui/token/pos_colors.dart';
 
 var logger = Logger(printer: LogfmtPrinter());
@@ -9,6 +9,7 @@ var logger = Logger(printer: LogfmtPrinter());
 class DefineService extends StatefulWidget {
 
   const DefineService({super.key});
+
 
   @override
   State<StatefulWidget> createState() => _DefineServiceState();
@@ -26,13 +27,13 @@ class _DefineServiceState extends State<DefineService>{
           Text(
             'نام',
             textAlign: TextAlign.right,
-            style: AviTextStyle.font16.style(PosColors.dimGray),
+            style: TextStyles.font16.style(PosColors.dimGray),
           ),
           TextField(
             keyboardType: TextInputType.number,
             textAlign: TextAlign.right,
             maxLines: 1,
-            style: AviTextStyle.font14.style(PosColors.dimGray),
+            style: TextStyles.font14.style(PosColors.dimGray),
             decoration: const InputDecoration(
               constraints: BoxConstraints(
                 maxHeight: 40,
@@ -44,7 +45,7 @@ class _DefineServiceState extends State<DefineService>{
           const SizedBox(
             height: 20,
           ),
-          const PriceTextField('تعرفه'),
+          const PriceTextField(text: 'تعرفه'),
           const SizedBox(
             height: 20,
           ),

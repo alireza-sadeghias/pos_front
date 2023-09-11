@@ -14,6 +14,7 @@ class Avatar extends StatelessWidget {
     this.radius = 50,
   });
 
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(

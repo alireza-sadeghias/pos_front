@@ -4,18 +4,18 @@ import 'package:pos/ui/token/font.dart';
 import 'package:pos/ui/token/pos_colors.dart';
 var logger = Logger(printer: LogfmtPrinter());
 class Scene extends StatelessWidget {
-  const Scene({super.key});@override
+  const Scene({super.key});
+
+@override
   Widget build(BuildContext context) {
-    double baseWidth = 360;
-    double fem = MediaQuery.of(context).size.width / baseWidth;
-    double ffem = fem * 0.97;
+    
     return Container(
       width: double.infinity,
       child: Container(
         // group118axH (5812:105789)
-        padding: EdgeInsets.fromLTRB(16*fem, 16*fem, 16*fem, 16*fem),
+        padding: EdgeInsets.fromLTRB(16, 16, 16, 16),
         width: double.infinity,
-        height: 80*fem,
+        height: 80,
         decoration: BoxDecoration (
          color: PosColors.white,
         ),
@@ -25,7 +25,7 @@ class Scene extends StatelessWidget {
           height: double.infinity,
           decoration: BoxDecoration (
             color: PosColors.vermilion,
-            borderRadius: BorderRadius.circular(5*fem),
+            borderRadius: BorderRadius.circular(5),
           ),
           child: Center(
             child: Text(
@@ -33,9 +33,9 @@ class Scene extends StatelessWidget {
               textAlign: TextAlign.right,
               style: SafeGoogleFont (
                 'IRANSans',
-                fontSize: 16*ffem,
+                fontSize: 16,
                 fontWeight: FontWeight.w700,
-                height: 1.2575*ffem/fem,
+                height: 1.2575,
                color: PosColors.white,
               ),
             ),

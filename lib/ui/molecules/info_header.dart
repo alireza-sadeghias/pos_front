@@ -5,6 +5,7 @@ import 'package:pos/ui/token/logos.dart';
 class HeaderInfo extends StatelessWidget {
   const HeaderInfo({super.key});
 
+
   @override
   Widget build(BuildContext context) {
     return Container(

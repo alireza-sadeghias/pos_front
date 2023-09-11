@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:logger/logger.dart';
 import 'package:pos/ui/atoms/label.dart';
-import 'package:pos/ui/molecules/text_with_icon.dart';
+import 'package:pos/ui/molecules/text_widgets.dart';
 import 'package:pos/ui/token/pos_colors.dart';
 import 'package:pos/ui/atoms/button.dart';
 import 'package:pos/ui/molecules/info_header.dart';
@@ -12,6 +12,7 @@ var logger = Logger(printer: LogfmtPrinter());
 
 class AddNewService extends StatelessWidget {
   const AddNewService({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -43,35 +44,35 @@ class AddNewService extends StatelessWidget {
               image: Images.linearEdit,
             ),
             Container(
-              margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 13 * fem),
+              margin: EdgeInsets.fromLTRB(0 , 0 , 0 , 13 ),
               child: Label(
                 text:'نام',
               ),
             ),
             Container(
-              margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 128 * fem),
+              margin: EdgeInsets.fromLTRB(0 , 0 , 0 , 128 ),
               width: double.infinity,
-              height: 225 * fem,
+              height: 225 ,
               child: Stack(
                 children: [
                   Positioned(
                     // group73T1b (5812:106100)
-                    left: 0 * fem,
-                    top: 95 * fem,
+                    left: 0 ,
+                    top: 95 ,
                     child: Container(
-                      width: 328 * fem,
-                      height: 45 * fem,
+                      width: 328 ,
+                      height: 45 ,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5 * fem),
+                        borderRadius: BorderRadius.circular(5 ),
                       ),
                       child: Center(
                         // rectangle19yVj (5812:106101)
                         child: SizedBox(
                           width: double.infinity,
-                          height: 45 * fem,
+                          height: 45 ,
                           child: Container(
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5 * fem),
+                              borderRadius: BorderRadius.circular(5 ),
                               border: Border.all(color: Color(0xffd5d5d5)),
                               color: PosColors.white,
                             ),
@@ -82,12 +83,12 @@ class AddNewService extends StatelessWidget {
                   ),
                   Positioned(
                     // tsb (5812:106102)
-                    left: 294 * fem,
-                    top: 62 * fem,
+                    left: 294 ,
+                    top: 62 ,
                     child: Align(
                       child: SizedBox(
-                        width: 34 * fem,
-                        height: 18 * fem,
+                        width: 34 ,
+                        height: 18 ,
                         child: Label(
                           text:'تعرفه',
                         ),
@@ -96,15 +97,15 @@ class AddNewService extends StatelessWidget {
                   ),
                   Positioned(
                     // rectangle19nxy (5812:106103)
-                    left: 0 * fem,
-                    top: 0 * fem,
+                    left: 0 ,
+                    top: 0 ,
                     child: Align(
                       child: SizedBox(
-                        width: 328 * fem,
-                        height: 225 * fem,
+                        width: 328 ,
+                        height: 225 ,
                         child: Container(
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(5 * fem),
+                            borderRadius: BorderRadius.circular(5 ),
                             border: Border.all(color: Color(0xffd5d5d5)),
                             color: PosColors.white,
                           ),
@@ -114,12 +115,12 @@ class AddNewService extends StatelessWidget {
                   ),
                   Positioned(
                     // 6im (5812:106104)
-                    left: 238 * fem,
-                    top: 98 * fem,
+                    left: 238 ,
+                    top: 98 ,
                     child: Align(
                       child: SizedBox(
-                        width: 74 * fem,
-                        height: 18 * fem,
+                        width: 74 ,
+                        height: 18 ,
                         child: Label(
                           text: 'فیبروئید رحم',
                         ),
@@ -128,18 +129,18 @@ class AddNewService extends StatelessWidget {
                   ),
                   Positioned(
                     // x1zp9 (5812:106105)
-                    left: 207 * fem,
-                    top: 61 * fem,
+                    left: 207 ,
+                    top: 61 ,
                     child: Align(
                       child: SizedBox(
-                        width: 105 * fem,
-                        height: 18 * fem,
+                        width: 105 ,
+                        height: 18 ,
                         child: RichText(
                           textAlign: TextAlign.right,
                           text: TextSpan(
                             style: SafeGoogleFont(
                               'IRANSans',
-                              fontSize: 14 * ffem,
+                              fontSize: 14 ,
                               fontWeight: FontWeight.w600,
                               height: 1.3,
                               color: PosColors.dimGray,
@@ -152,7 +153,7 @@ class AddNewService extends StatelessWidget {
                                 text: 'X1',
                                 style: SafeGoogleFont(
                                   'IRANSans',
-                                  fontSize: 14 * ffem,
+                                  fontSize: 14 ,
                                   fontWeight: FontWeight.w400,
                                   height: 1.3,
                                   color: PosColors.dimGray,
@@ -166,12 +167,12 @@ class AddNewService extends StatelessWidget {
                   ),
                   Positioned(
                     // gqP (5812:106106)
-                    left: 265 * fem,
-                    top: 143 * fem,
+                    left: 265 ,
+                    top: 143 ,
                     child: Align(
                       child: SizedBox(
-                        width: 47 * fem,
-                        height: 18 * fem,
+                        width: 47 ,
+                        height: 18 ,
                         child: Label(
                           text:'فیبروئید',
                         ),
@@ -180,12 +181,12 @@ class AddNewService extends StatelessWidget {
                   ),
                   Positioned(
                     // NiD (5812:106107)
-                    left: 264 * fem,
-                    top: 188 * fem,
+                    left: 264 ,
+                    top: 188 ,
                     child: Align(
                       child: SizedBox(
-                        width: 48 * fem,
-                        height: 18 * fem,
+                        width: 48 ,
+                        height: 18 ,
                         child: Label(
                           text:'ناباروری',
                         ),
@@ -194,12 +195,12 @@ class AddNewService extends StatelessWidget {
                   ),
                   Positioned(
                     // line8sey (5812:106108)
-                    left: 16 * fem,
-                    top: 131 * fem,
+                    left: 16 ,
+                    top: 131 ,
                     child: Align(
                       child: SizedBox(
-                        width: 296 * fem,
-                        height: 1 * fem,
+                        width: 296 ,
+                        height: 1 ,
                         child: Container(
                           decoration: BoxDecoration(
                             color: Color(0xffd5d5d5),
@@ -210,12 +211,12 @@ class AddNewService extends StatelessWidget {
                   ),
                   Positioned(
                     // line9bay (5812:106109)
-                    left: 16 * fem,
-                    top: 176 * fem,
+                    left: 16 ,
+                    top: 176 ,
                     child: Align(
                       child: SizedBox(
-                        width: 296 * fem,
-                        height: 1 * fem,
+                        width: 296 ,
+                        height: 1 ,
                         child: Container(
                           decoration: BoxDecoration(
                             color: Color(0xffd5d5d5),
@@ -226,8 +227,8 @@ class AddNewService extends StatelessWidget {
                   ),
                   Positioned(
                     // group72Whw (5812:106115)
-                    left: 0 * fem,
-                    top: 0 * fem,
+                    left: 0 ,
+                    top: 0 ,
                     child: TextButton(
                       onPressed: () {},
                       style: TextButton.styleFrom(
@@ -235,21 +236,21 @@ class AddNewService extends StatelessWidget {
                       ),
                       child: Container(
                         padding: EdgeInsets.fromLTRB(
-                            16 * fem, 13 * fem, 16 * fem, 14 * fem),
-                        width: 328 * fem,
-                        height: 45 * fem,
+                            16 , 13 , 16 , 14 ),
+                        width: 328 ,
+                        height: 45 ,
                         decoration: BoxDecoration(
                           border: Border.all(color: Color(0xffd5d5d5)),
                           color: PosColors.white,
-                          borderRadius: BorderRadius.circular(5 * fem),
+                          borderRadius: BorderRadius.circular(5 ),
                         ),
                         child: RichText(
                           text: TextSpan(
                             style: SafeGoogleFont(
                               'IRANSans',
-                              fontSize: 14 * ffem,
+                              fontSize: 14 ,
                               fontWeight: FontWeight.w500,
-                              height: 1.5 * ffem / fem,
+                              height: 1.5  / fem,
                               color: PosColors.dimGray,
                             ),
                             children: [
@@ -257,7 +258,7 @@ class AddNewService extends StatelessWidget {
                                 text: 'X1',
                                 style: SafeGoogleFont(
                                   'IRANSans',
-                                  fontSize: 14 * ffem,
+                                  fontSize: 14 ,
                                   fontWeight: FontWeight.w500,
                                   height: 1.3,
                                   color: Color(0xff515151),
@@ -267,7 +268,7 @@ class AddNewService extends StatelessWidget {
                                 text: 'Y21',
                                 style: SafeGoogleFont(
                                   'IRANSans',
-                                  fontSize: 14 * ffem,
+                                  fontSize: 14 ,
                                   fontWeight: FontWeight.w500,
                                   height: 1.3,
                                   color: Color(0xffc1c1c1),

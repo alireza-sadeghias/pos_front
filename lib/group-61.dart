@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:logger/logger.dart';
 var logger = Logger(printer: LogfmtPrinter());
 class Scene extends StatelessWidget {
-  const Scene({super.key});@override
+  const Scene({super.key});
+
+@override
   Widget build(BuildContext context) {
     double baseWidth = 124;
     double fem = MediaQuery.of(context).size.width / baseWidth;
@@ -10,18 +12,18 @@ class Scene extends StatelessWidget {
       width: double.infinity,
       child: Container(
         // group61Jo3 (5812:106919)
-        padding: EdgeInsets.fromLTRB(16*fem, 16*fem, 16*fem, 16*fem),
+        padding: EdgeInsets.fromLTRB(16, 16, 16, 16),
         width: double.infinity,
         decoration: BoxDecoration (
           border: Border.all(color: Color(0xff9747ff)),
-          borderRadius: BorderRadius.circular(5*fem),
+          borderRadius: BorderRadius.circular(5),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
               // property1defaultq2H (5812:106920)
-              margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 16*fem),
+              margin: EdgeInsets.fromLTRB(0, 0, 0, 16),
               child: TextButton(
                 onPressed: () {},
                 style: TextButton.styleFrom (
@@ -34,87 +36,87 @@ class Scene extends StatelessWidget {
                     children: [
                       Container(
                         // ellipse9ibs (5812:106928)
-                        width: 8*fem,
-                        height: 8*fem,
+                        width: 8,
+                        height: 8,
                         decoration: BoxDecoration (
-                          borderRadius: BorderRadius.circular(4*fem),
+                          borderRadius: BorderRadius.circular(4),
                         ),
                       ),
                       SizedBox(
-                        width: 4*fem,
+                        width: 4,
                       ),
                       Container(
                         // ellipse7eVX (5812:106924)
-                        width: 8*fem,
-                        height: 8*fem,
+                        width: 8,
+                        height: 8,
                         decoration: BoxDecoration (
-                          borderRadius: BorderRadius.circular(4*fem),
+                          borderRadius: BorderRadius.circular(4),
                         ),
                       ),
                       SizedBox(
-                        width: 4*fem,
+                        width: 4,
                       ),
                       Container(
                         // ellipse8BVT (5812:106926)
-                        width: 8*fem,
-                        height: 8*fem,
+                        width: 8,
+                        height: 8,
                         decoration: BoxDecoration (
-                          borderRadius: BorderRadius.circular(4*fem),
+                          borderRadius: BorderRadius.circular(4),
                         ),
                       ),
                       SizedBox(
-                        width: 4*fem,
+                        width: 4,
                       ),
                       Container(
                         // ellipse6Kbf (5812:106922)
-                        width: 8*fem,
-                        height: 8*fem,
+                        width: 8,
+                        height: 8,
                         decoration: BoxDecoration (
-                          borderRadius: BorderRadius.circular(4*fem),
+                          borderRadius: BorderRadius.circular(4),
                         ),
                       ),
                       SizedBox(
-                        width: 4*fem,
+                        width: 4,
                       ),
                       Container(
                         // ellipse5rrV (5812:106927)
-                        width: 8*fem,
-                        height: 8*fem,
+                        width: 8,
+                        height: 8,
                         decoration: BoxDecoration (
-                          borderRadius: BorderRadius.circular(4*fem),
+                          borderRadius: BorderRadius.circular(4),
                         ),
                       ),
                       SizedBox(
-                        width: 4*fem,
+                        width: 4,
                       ),
                       Container(
                         // ellipse4bp5 (5812:106923)
-                        width: 8*fem,
-                        height: 8*fem,
+                        width: 8,
+                        height: 8,
                         decoration: BoxDecoration (
-                          borderRadius: BorderRadius.circular(4*fem),
+                          borderRadius: BorderRadius.circular(4),
                         ),
                       ),
                       SizedBox(
-                        width: 4*fem,
+                        width: 4,
                       ),
                       Container(
                         // ellipse3Kk5 (5812:106925)
-                        width: 8*fem,
-                        height: 8*fem,
+                        width: 8,
+                        height: 8,
                         decoration: BoxDecoration (
-                          borderRadius: BorderRadius.circular(4*fem),
+                          borderRadius: BorderRadius.circular(4),
                         ),
                       ),
                       SizedBox(
-                        width: 4*fem,
+                        width: 4,
                       ),
                       Container(
                         // ellipse2sFo (5812:106921)
-                        width: 8*fem,
-                        height: 8*fem,
+                        width: 8,
+                        height: 8,
                         decoration: BoxDecoration (
-                          borderRadius: BorderRadius.circular(4*fem),
+                          borderRadius: BorderRadius.circular(4),
                         ),
                       ),
                     ],
@@ -130,94 +132,94 @@ class Scene extends StatelessWidget {
                 children: [
                   Container(
                     // ellipse9xY9 (5812:106937)
-                    width: 8*fem,
-                    height: 8*fem,
+                    width: 8,
+                    height: 8,
                     decoration: BoxDecoration (
-                      borderRadius: BorderRadius.circular(4*fem),
+                      borderRadius: BorderRadius.circular(4),
                       color: Color(0xff515151),
                     ),
                   ),
                   SizedBox(
-                    width: 4*fem,
+                    width: 4,
                   ),
                   Container(
                     // ellipse7V2H (5812:106933)
-                    width: 8*fem,
-                    height: 8*fem,
+                    width: 8,
+                    height: 8,
                     decoration: BoxDecoration (
-                      borderRadius: BorderRadius.circular(4*fem),
+                      borderRadius: BorderRadius.circular(4),
                       color: Color(0xff515151),
                     ),
                   ),
                   SizedBox(
-                    width: 4*fem,
+                    width: 4,
                   ),
                   Container(
                     // ellipse8c6u (5812:106935)
-                    width: 8*fem,
-                    height: 8*fem,
+                    width: 8,
+                    height: 8,
                     decoration: BoxDecoration (
-                      borderRadius: BorderRadius.circular(4*fem),
+                      borderRadius: BorderRadius.circular(4),
                       color: Color(0xff515151),
                     ),
                   ),
                   SizedBox(
-                    width: 4*fem,
+                    width: 4,
                   ),
                   Container(
                     // ellipse6wus (5812:106931)
-                    width: 8*fem,
-                    height: 8*fem,
+                    width: 8,
+                    height: 8,
                     decoration: BoxDecoration (
-                      borderRadius: BorderRadius.circular(4*fem),
+                      borderRadius: BorderRadius.circular(4),
                       color: Color(0xff515151),
                     ),
                   ),
                   SizedBox(
-                    width: 4*fem,
+                    width: 4,
                   ),
                   Container(
                     // ellipse5UQ1 (5812:106936)
-                    width: 8*fem,
-                    height: 8*fem,
+                    width: 8,
+                    height: 8,
                     decoration: BoxDecoration (
-                      borderRadius: BorderRadius.circular(4*fem),
+                      borderRadius: BorderRadius.circular(4),
                       color: Color(0xff515151),
                     ),
                   ),
                   SizedBox(
-                    width: 4*fem,
+                    width: 4,
                   ),
                   Container(
                     // ellipse4ox5 (5812:106932)
-                    width: 8*fem,
-                    height: 8*fem,
+                    width: 8,
+                    height: 8,
                     decoration: BoxDecoration (
-                      borderRadius: BorderRadius.circular(4*fem),
+                      borderRadius: BorderRadius.circular(4),
                       color: Color(0xff515151),
                     ),
                   ),
                   SizedBox(
-                    width: 4*fem,
+                    width: 4,
                   ),
                   Container(
                     // ellipse3x4H (5812:106934)
-                    width: 8*fem,
-                    height: 8*fem,
+                    width: 8,
+                    height: 8,
                     decoration: BoxDecoration (
-                      borderRadius: BorderRadius.circular(4*fem),
+                      borderRadius: BorderRadius.circular(4),
                       color: Color(0xff515151),
                     ),
                   ),
                   SizedBox(
-                    width: 4*fem,
+                    width: 4,
                   ),
                   Container(
                     // ellipse2gW5 (5812:106930)
-                    width: 8*fem,
-                    height: 8*fem,
+                    width: 8,
+                    height: 8,
                     decoration: BoxDecoration (
-                      borderRadius: BorderRadius.circular(4*fem),
+                      borderRadius: BorderRadius.circular(4),
                       color: Color(0xff515151),
                     ),
                   ),

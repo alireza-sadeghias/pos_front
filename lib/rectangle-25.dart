@@ -4,7 +4,9 @@ import 'package:pos/ui/token/font.dart';
 import 'package:pos/ui/token/pos_colors.dart';
 var logger = Logger(printer: LogfmtPrinter());
 class Scene extends StatelessWidget {
-  const Scene({super.key});@override
+  const Scene({super.key});
+
+@override
   Widget build(BuildContext context) {
     double baseWidth = 77;
     double fem = MediaQuery.of(context).size.width / baseWidth;
@@ -13,11 +15,11 @@ class Scene extends StatelessWidget {
       width: double.infinity,
       child: Container(
         // rectangle25bcm (5812:105417)
-        padding: EdgeInsets.fromLTRB(16*fem, 16*fem, 16*fem, 16*fem),
+        padding: EdgeInsets.fromLTRB(16, 16, 16, 16),
         width: double.infinity,
         decoration: BoxDecoration (
           border: Border.all(color: Color(0xff9747ff)),
-          borderRadius: BorderRadius.circular(5*fem),
+          borderRadius: BorderRadius.circular(5),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -34,10 +36,10 @@ class Scene extends StatelessWidget {
                   // rectangle25eb3 (5812:105419)
                   child: SizedBox(
                     width: double.infinity,
-                    height: 45*fem,
+                    height: 45,
                     child: Container(
                       decoration: BoxDecoration (
-                        borderRadius: BorderRadius.circular(5*fem),
+                        borderRadius: BorderRadius.circular(5),
                         border: Border.all(color: Color(0xffd4d4d4)),
                color: PosColors.white,
                       ),
@@ -47,7 +49,7 @@ class Scene extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 16*fem,
+              height: 16,
             ),
             TextButton(
               // property1variant2xbj (5812:105420)
@@ -61,10 +63,10 @@ class Scene extends StatelessWidget {
                   // rectangle25uG5 (5812:105421)
                   child: SizedBox(
                     width: double.infinity,
-                    height: 45*fem,
+                    height: 45,
                     child: Container(
                       decoration: BoxDecoration (
-                        borderRadius: BorderRadius.circular(5*fem),
+                        borderRadius: BorderRadius.circular(5),
                         border: Border.all(color: PosColors.vermilion),
                         color: Color(0x1eef4023),
                       ),
@@ -74,7 +76,7 @@ class Scene extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 16*fem,
+              height: 16,
             ),
             TextButton(
               // property1variant3pdw (5812:105422)
@@ -84,11 +86,11 @@ class Scene extends StatelessWidget {
               ),
               child: Container(
                 width: double.infinity,
-                height: 45*fem,
+                height: 45,
                 decoration: BoxDecoration (
                   border: Border.all(color: PosColors.vermilion),
                color: PosColors.white,
-                  borderRadius: BorderRadius.circular(5*fem),
+                  borderRadius: BorderRadius.circular(5),
                 ),
                 child: Center(
                   child: Text(
@@ -96,9 +98,9 @@ class Scene extends StatelessWidget {
                     textAlign: TextAlign.right,
                     style: SafeGoogleFont (
                       'IRANSans',
-                      fontSize: 16*ffem,
+                      fontSize: 16,
                       fontWeight: FontWeight.w700,
-                      height: 1.2575*ffem/fem,
+                      height: 1.2575,
                       color: PosColors.cinnabar,
                     ),
                   ),

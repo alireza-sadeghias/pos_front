@@ -10,6 +10,7 @@ var logger = Logger(printer: LogfmtPrinter());
 class RegisterInformationReview extends StatelessWidget {
   const RegisterInformationReview({super.key});
 
+
   @override
   Widget build(BuildContext context) {
     return LoginContainer(
@@ -22,7 +23,7 @@ class RegisterInformationReview extends StatelessWidget {
           ),
           Text('تایید اطلاعات',
               textAlign: TextAlign.right,
-              style: AviTextStyle.font14.style(PosColors.dimGray)),
+              style: TextStyles.font14.style(PosColors.dimGray)),
           const SizedBox(
             height: 10,
           ),
@@ -37,14 +38,14 @@ class RegisterInformationReview extends StatelessWidget {
           ),
           Text('مریم محمودی',
               textAlign: TextAlign.center,
-              style: AviTextStyle.font18.style(PosColors.dimGray)),
+              style: TextStyles.font18.style(PosColors.dimGray)),
           const SizedBox(
             height: 10,
           ),
           Text(
             'مطب دکتر طاهره ابراهیمی زاده',
             textAlign: TextAlign.center,
-            style: AviTextStyle.font16.style(
+            style: TextStyles.font16.style(
               PosColors.dimGray,
             ),
           ),
@@ -54,8 +55,8 @@ class RegisterInformationReview extends StatelessWidget {
           Text(
             'متخصص زنان و زایمان',
             textAlign: TextAlign.center,
-            style: AviTextStyle.font14.style(
-              PosColors.dimGrey,
+            style: TextStyles.font14.style(
+              PosColors.dimGray,
             ),
           ),
           const SizedBox(
@@ -78,16 +79,16 @@ class RegisterInformationReview extends StatelessWidget {
             child: Text(
               'نشانی',
               textAlign: TextAlign.right,
-              style: AviTextStyle.font14.style(
-                PosColors.dimGrey,
+              style: TextStyles.font14.style(
+                PosColors.dimGray,
               ),
             ),
           ),
           Text(
             'تهران- آیت الله کاشانی-خ نیرو- کوچه آسمان-پ66 - واحد22',
             textAlign: TextAlign.right,
-            style: AviTextStyle.font14.style(
-              PosColors.dimGrey,
+            style: TextStyles.font14.style(
+              PosColors.dimGray,
             ),
           ),
           const SizedBox(
@@ -98,16 +99,16 @@ class RegisterInformationReview extends StatelessWidget {
             child: Text(
               'تلفن ثابت',
               textAlign: TextAlign.right,
-              style: AviTextStyle.font14.style(
-                PosColors.dimGrey,
+              style: TextStyles.font14.style(
+                PosColors.dimGray,
               ),
             ),
           ),
           Text(
             '021-44362596 / 021-44443625',
             textAlign: TextAlign.right,
-            style: AviTextStyle.font14.style(
-              PosColors.dimGrey,
+            style: TextStyles.font14.style(
+              PosColors.dimGray,
             ),
           ),
           const SizedBox(
@@ -118,16 +119,16 @@ class RegisterInformationReview extends StatelessWidget {
             child: Text(
               'تلفن همراه',
               textAlign: TextAlign.right,
-              style: AviTextStyle.font14.style(
-                PosColors.dimGrey,
+              style: TextStyles.font14.style(
+                PosColors.dimGray,
               ),
             ),
           ),
           Text(
             '091231245654',
             textAlign: TextAlign.right,
-            style: AviTextStyle.font14.style(
-              PosColors.dimGrey,
+            style: TextStyles.font14.style(
+              PosColors.dimGray,
             ),
           ),
           const SizedBox(
@@ -148,7 +149,7 @@ class RegisterInformationReview extends StatelessWidget {
                 child: Text(
                   'تایید و ادامه',
                   textAlign: TextAlign.start,
-                  style: AviTextStyle.font16.style(PosColors.white),
+                  style: TextStyles.font16.style(PosColors.white),
                 ),
               ),
             ),

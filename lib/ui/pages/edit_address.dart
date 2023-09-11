@@ -10,6 +10,7 @@ var logger = Logger(printer: LogfmtPrinter());
 class EditAddress extends StatelessWidget {
   const EditAddress({super.key});
 
+
   @override
   Widget build(BuildContext context) {
     return LoginContainer(
@@ -23,7 +24,7 @@ class EditAddress extends StatelessWidget {
         Text(
           'ویرایش نشانی',
           textAlign: TextAlign.start,
-          style: AviTextStyle.font16.style(PosColors.dimGray),
+          style: TextStyles.font16.style(PosColors.dimGray),
         ),
         const SizedBox(
           height: 20,
@@ -31,12 +32,12 @@ class EditAddress extends StatelessWidget {
         Text(
           'نشانی خود را اینجا وارد کنید',
           textAlign: TextAlign.start,
-          style: AviTextStyle.font16.style(PosColors.dimGray),
+          style: TextStyles.font16.style(PosColors.dimGray),
         ),
         TextField(
           textAlign: TextAlign.start,
           maxLines: 1,
-          style: AviTextStyle.font14.style(PosColors.dimGray),
+          style: TextStyles.font14.style(PosColors.dimGray),
           decoration: const InputDecoration(
             constraints: BoxConstraints(
               maxHeight: 40,
@@ -51,7 +52,7 @@ class EditAddress extends StatelessWidget {
         Text(
           'تلفن مطب',
           textAlign: TextAlign.start,
-          style: AviTextStyle.font16.style(PosColors.dimGray),
+          style: TextStyles.font16.style(PosColors.dimGray),
         ),
         const SizedBox(
           height: 20,
@@ -59,7 +60,7 @@ class EditAddress extends StatelessWidget {
         Text(
           'شماره اول',
           textAlign: TextAlign.start,
-          style: AviTextStyle.font16.style(PosColors.dimGray),
+          style: TextStyles.font16.style(PosColors.dimGray),
         ),
         TextField(
           keyboardType: TextInputType.number,
@@ -68,7 +69,7 @@ class EditAddress extends StatelessWidget {
           ],
           textAlign: TextAlign.start,
           maxLines: 1,
-          style: AviTextStyle.font14.style(PosColors.dimGray),
+          style: TextStyles.font14.style(PosColors.dimGray),
           decoration: const InputDecoration(
             constraints: BoxConstraints(
               maxHeight: 40,
@@ -84,7 +85,7 @@ class EditAddress extends StatelessWidget {
         Text(
           'شماره دوم',
           textAlign: TextAlign.start,
-          style: AviTextStyle.font16.style(PosColors.dimGray),
+          style: TextStyles.font16.style(PosColors.dimGray),
         ),
         TextField(
           keyboardType: TextInputType.number,
@@ -93,7 +94,7 @@ class EditAddress extends StatelessWidget {
           ],
           textAlign: TextAlign.right,
           maxLines: 1,
-          style: AviTextStyle.font14.style(PosColors.dimGray),
+          style: TextStyles.font14.style(PosColors.dimGray),
           decoration: const InputDecoration(
             constraints: BoxConstraints(
               maxHeight: 40,

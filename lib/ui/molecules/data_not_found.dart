@@ -9,6 +9,7 @@ class DataNotFound extends StatelessWidget{
   final bool hasButton;
   final VoidCallback? onPressed;
 
+
   @override
   Widget build(BuildContext context) {
     return
@@ -31,7 +32,7 @@ class DataNotFound extends StatelessWidget{
               child: Text(
                 'نتیجه ای یافت نشد!',
                 textAlign: TextAlign.right,
-                style: AviTextStyle.font14.style(
+                style: TextStyles.font14.style(
                   PosColors.dimGray,
                 ),
               ),
@@ -46,7 +47,7 @@ class DataNotFound extends StatelessWidget{
                       color: Color(0xff5c8dfa))),
               child: Text(
                 "اضافه کردن",
-                style: AviTextStyle.font14.style(
+                style: TextStyles.font14.style(
                   const Color(0xff5c8dfa),
                 ),
               ),

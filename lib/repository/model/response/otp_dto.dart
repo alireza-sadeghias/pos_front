@@ -10,6 +10,7 @@ class OtpDto{
     return OtpDto(token: json['token'], ttl: json['ttl'], dto: json['dto']);
   }
 
+
   @override
   String toString() {
     return 'FetchDto dto: $dto, ttl: $ttl, token: $token.';

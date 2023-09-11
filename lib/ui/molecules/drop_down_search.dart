@@ -8,7 +8,8 @@ import 'data_not_found.dart';
 Logger logger = Logger(printer: PrettyPrinter());
 
 class DropDownModal extends StatefulWidget {
-  DropDownModal({Key? key}) : super(key: key);
+  const DropDownModal({Key? key}) : super(key: key);
+
 
   @override
   _DropDownModalState createState() => _DropDownModalState();
@@ -48,12 +49,14 @@ class _DropDownModalState extends State<DropDownModal> {
   TextEditingController _controller = TextEditingController();
   List<String> foundDrugs = [];
 
+
   @override
   void initState() {
     super.initState();
     foundDrugs = List<String>.from(randomDrugNames);
     // foundDrugs = [...randomDrugNames];
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -91,7 +94,7 @@ class _DropDownModalState extends State<DropDownModal> {
               minLines: 1,
               textAlign: TextAlign.start,
               showCursor: true,
-              style: AviTextStyle.font14.style(
+              style: TextStyles.font14.style(
                 PosColors.dimGray,
               ),
             ),
@@ -100,7 +103,7 @@ class _DropDownModalState extends State<DropDownModal> {
             margin: const EdgeInsets.only(right: 16,top: 12,bottom: 12),
             child: Text(
               'جستجو برای: ${_controller.text.isEmpty?'متنی وارد نشده است.':_controller.text}',
-              style: AviTextStyle.font14.style(
+              style: TextStyles.font14.style(
                 PosColors.dimGray,
               ),
             ),
@@ -148,10 +151,10 @@ class _DropDownModalState extends State<DropDownModal> {
                 minimumSize: const Size(double.maxFinite, 48),
                 shape: LinearBorder.bottom(
                     alignment: BorderSide.strokeAlignOutside,
-                    side: const BorderSide(style: BorderStyle.solid, color: PosColors.dimGrey)),
+                    side: const BorderSide(style: BorderStyle.solid, color: PosColors.dimGray)),
                 alignment: AlignmentDirectional.centerStart,
               ),
-              child: Text(s,style: AviTextStyle.font.style(PosColors.dimGrey,fontWeight: FontWeight.w700,size: 14)),
+              child: Text(s,style: TextStyles.font.style(PosColors.dimGray,fontWeight: FontWeight.w700,size: 14)),
             ),
         ],
       );

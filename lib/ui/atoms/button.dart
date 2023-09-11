@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../token/font.dart';
 
 class Button extends StatelessWidget {
-  Button({
+  const Button({
     Key? key,
     this.onPressed,
     this.text,
@@ -28,6 +28,7 @@ class Button extends StatelessWidget {
   final bool isEnabled;
   final BorderRadius? borderRadius;
   final TextAlign? textAlign;
+
 
   @override
   Widget build(BuildContext context) {

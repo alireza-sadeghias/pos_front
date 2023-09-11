@@ -13,6 +13,7 @@ var logger = Logger(printer: LogfmtPrinter());
 class SettingPage extends StatelessWidget {
   const SettingPage({super.key});
 
+
   @override
   Widget build(BuildContext context) {
     return Directionality(
@@ -30,7 +31,7 @@ class SettingPage extends StatelessWidget {
                   height: 18,
                   child: Text('تنظیمات',
                       textAlign: TextAlign.right,
-                      style: AviTextStyle.font14.style(PosColors.vermilion)),
+                      style: TextStyles.font14.style(PosColors.vermilion)),
                 ),
                 const SizedBox(height: 24),
                 RowIcon(
@@ -43,7 +44,7 @@ class SettingPage extends StatelessWidget {
                   top: 0,
                   right: 8,
                   left: 8,
-                  style: AviTextStyle.font14.style(PosColors.dimGray),
+                  style: TextStyles.font14.style(PosColors.dimGray),
                   onPressed: ()=>{},
                 ),
                 const SizedBox(height: 8),
@@ -59,11 +60,23 @@ class SettingPage extends StatelessWidget {
                   top: 0,
                   right: 8,
                   left: 8,
-                  style: AviTextStyle.font14.style(PosColors.dimGray),
+                  style: TextStyles.font14.style(PosColors.dimGray),
                   onPressed: ()=>{          Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => SettingPageServiceList(),
+                      builder: (context) => SettingPageServiceList(
+                        settingTitle: RowIcon(
+                          top: 0,
+                          icon: Image.asset(
+                            'assets/pos-final/images/edit-2-linear.png',
+                            width: 20,
+                            height: 20,
+                          ),
+                          text: 'تعریف خدمات و تعرفه ها',
+                          style: TextStyles.font14.style(PosColors.dimGray),
+                          onPressed: () => {},
+                        ),
+                      ),
                     ),
                   )
                   },
@@ -81,7 +94,7 @@ class SettingPage extends StatelessWidget {
                   top: 0,
                   right: 8,
                   left: 8,
-                  style: AviTextStyle.font14.style(PosColors.dimGray),
+                  style: TextStyles.font14.style(PosColors.dimGray),
                   onPressed: ()=>{
                     Navigator.push(
                       context,

@@ -1,23 +1,26 @@
 import 'package:flutter/material.dart';
 
-class PosColors {
+abstract final class PosColors {
+
   PosColors._(); // it is private constructor that can only be called from it self
+
+  static const background = Color(0xffffffff);
 
   // Grays
   static const dimGray = Color(0xff717171);
   static const dimDarkGray = Color(0xff515151);
-  static const background = Color(0xffffffff);
   static const gray = Color(0xff808080);
+  static const darkGray = Color(0xffa9a9a9);
   static const lightGray = Color(0xffd3d3d3);
   static const darkCharcoal = Color(0xff515151);
   static const mediumDarkShadeBlue = Color(0xff3568d4);
   static const silver = Color(0xffc0c0c0);
   static const azureGray = Color(0xff5e5e5e);
-  static const lightGrey = Color(0xffd3d3d3);
-  static const mediumGrey = Color(0xff808080);
+  static const mediumGray = Color(0xff808080);
   static const crayolaCrystal =  Color(0xffd5d5d5);
-  static const darkGrey = Color(0xffa9a9a9);
-  static const deepGrey = Color(0x148f5aff);
+  static const deepGray = Color(0x148f5aff);
+  static const dimGrayTransparent = Color(0x5E696969);
+
 
   // Whites
   static const white = Color(0xffffffff);
@@ -48,6 +51,9 @@ class PosColors {
   static const limeGreen = Color(0xff32cd32);
   static const mediumSeaGreen = Color(0xff3cb371);
   static const oliveDrab = Color(0xff6b8e23);
+  static const darkShadeGreen = Color(0xbe37c860);
+  static const mediumDarkShadeGreen = Color(0x1437c860);
+  static const success = Color(0xff4ade80);
   static const forestGreen = Color(0xff228b22);
   static const darkGreen = Color(0xff006400);
 
@@ -106,8 +112,6 @@ class PosColors {
   // Aquamarine
   static const aquamarine = Color(0xff7fffd4);
 
-  // Dark Gray
-  static const darkGray = Color(0xffa9a9a9);
 
   // Pink
   static const pink = Color(0xffffc0cb);
@@ -147,7 +151,6 @@ class PosColors {
   static const darkTurquoise = Color(0xff00ced1);
   static const darkViolet = Color(0xff9400d3);
   static const deepSkyBlue = Color(0xff00bfff);
-  static const dimGrey = Color(0xff696969);
   static const fuchsia = Color(0xffff00ff);
   static const gainsboro = Color(0xffdcdcdc);
   static const ghostWhite = Color(0xfff8f8ff);

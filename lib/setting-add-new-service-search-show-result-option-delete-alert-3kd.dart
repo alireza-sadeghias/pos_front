@@ -4,16 +4,16 @@ import 'package:pos/ui/token/font.dart';
 import 'package:pos/ui/token/pos_colors.dart';
 var logger = Logger(printer: LogfmtPrinter());
 class Scene extends StatelessWidget {
-  const Scene({super.key});@override
+  const Scene({super.key});
+
+@override
   Widget build(BuildContext context) {
-    double baseWidth = 360;
-    double fem = MediaQuery.of(context).size.width / baseWidth;
-    double ffem = fem * 0.97;
+    
     return Container(
       width: double.infinity,
       child: Container(
         // settingaddnewservicesearchshow (5812:106629)
-        padding: EdgeInsets.fromLTRB(16*fem, 16*fem, 16*fem, 252*fem),
+        padding: EdgeInsets.fromLTRB(16, 16, 16, 252),
         width: double.infinity,
         decoration: BoxDecoration (
          color: PosColors.white,
@@ -23,44 +23,44 @@ class Scene extends StatelessWidget {
           children: [
             Container(
               // component74fB (5812:106630)
-              margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 23*fem),
+              margin: EdgeInsets.fromLTRB(0, 0, 0, 23),
               width: double.infinity,
-              height: 63*fem,
+              height: 63,
               child: Container(
                 // autogroup4zlqQDF (BnM7vtcvz7M9NcupPU4ZLq)
                 width: double.infinity,
-                height: 44*fem,
+                height: 44,
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Container(
                       // groupwU5 (I5812:106630;5812:106905)
-                      margin: EdgeInsets.fromLTRB(0*fem, 2*fem, 129*fem, 0*fem),
-                      width: 24*fem,
-                      height: 24*fem,
+                      margin: EdgeInsets.fromLTRB(0, 2, 129, 0),
+                      width: 24,
+                      height: 24,
                       child: Image.asset(
                         'assets/pos-final/images/home_dark.png',
-                        width: 24*fem,
-                        height: 24*fem,
+                        width: 24,
+                        height: 24,
                       ),
                     ),
                     Container(
                       // group88Sfj (I5812:106630;5812:106901)
-                      margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 8*fem, 1*fem),
+                      margin: EdgeInsets.fromLTRB(0, 0, 8, 1),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
                           Container(
                             // NJV (I5812:106630;5812:106902)
-                            margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 7*fem),
+                            margin: EdgeInsets.fromLTRB(0, 0, 0, 7),
                             child: Text(
                               'دکتر مریم محمودی',
                               textAlign: TextAlign.right,
                               style: TextStyle (
                       fontFamily:         'IRANSans',
-                                fontSize: 14*ffem,
+                                fontSize: 14,
                                 fontWeight: FontWeight.w600,
-                                height: 1.2575*ffem/fem,
+                                height: 1.2575,
                                 color: PosColors.dimGray,
                               ),
                             ),
@@ -71,9 +71,9 @@ class Scene extends StatelessWidget {
                             textAlign: TextAlign.right,
                             style: TextStyle (
                       fontFamily:       'IRANSans',
-                              fontSize: 14*ffem,
+                              fontSize: 14,
                               fontWeight: FontWeight.w500,
-                              height: 1.2575*ffem/fem,
+                              height: 1.2575,
                               color: PosColors.dimGray,
                             ),
                           ),
@@ -82,9 +82,9 @@ class Scene extends StatelessWidget {
                     ),
                     Container(
                       // d5001bww (I5812:106630;5812:106900)
-                      margin: EdgeInsets.fromLTRB(0*fem, 2*fem, 0*fem, 0*fem),
-                      width: 40*fem,
-                      height: 42*fem,
+                      margin: EdgeInsets.fromLTRB(0, 2, 0, 0),
+                      width: 40,
+                      height: 42,
                       child: Image.asset(
                         'assets/pos-final/images/d-500-1-Chf.png',
                         fit: BoxFit.cover,
@@ -96,21 +96,21 @@ class Scene extends StatelessWidget {
             ),
             Container(
               // autogroupsvyf7vH (BnM7NjsqSyseMG2t3SSVyF)
-              margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 24*fem),
+              margin: EdgeInsets.fromLTRB(0, 0, 0, 24),
               width: double.infinity,
-              height: 21*fem,
+              height: 21,
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Container(
                     // morelinearqrH (5812:106636)
-                    margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 87*fem, 0*fem),
-                    width: 20*fem,
-                    height: 20*fem,
+                    margin: EdgeInsets.fromLTRB(0, 0, 87, 0),
+                    width: 20,
+                    height: 20,
                     child: Image.asset(
                       'assets/pos-final/images/more-linear-6yf.png',
-                      width: 20*fem,
-                      height: 20*fem,
+                      width: 20,
+                      height: 20,
                     ),
                   ),
                   Container(
@@ -125,53 +125,53 @@ class Scene extends StatelessWidget {
                           textAlign: TextAlign.right,
                           style: TextStyle (
                       fontFamily:     'IRANSans',
-                            fontSize: 14*ffem,
+                            fontSize: 14,
                             fontWeight: FontWeight.w600,
-                            height: 1.2575*ffem/fem,
+                            height: 1.2575,
                             color: PosColors.vermilion,
                           ),
                         ),
                         SizedBox(
-                          width: 4*fem,
+                          width: 4,
                         ),
                         Container(
                           // autogroupgpyqEdX (BnM7Z9k9vLmyWsCASTGPYq)
-                          width: 66*fem,
+                          width: 66,
                           height: double.infinity,
                           child: Stack(
                             children: [
                               Positioned(
                                 // arrowleftlinearn9F (5812:106639)
-                                left: 0*fem,
-                                top: 1*fem,
+                                left: 0,
+                                top: 1,
                                 child: Align(
                                   child: SizedBox(
-                                    width: 20*fem,
-                                    height: 20*fem,
+                                    width: 20,
+                                    height: 20,
                                     child: Image.asset(
                                       'assets/pos-final/images/arrow-left-linear-Wnm.png',
-                                      width: 20*fem,
-                                      height: 20*fem,
+                                      width: 20,
+                                      height: 20,
                                     ),
                                   ),
                                 ),
                               ),
                               Positioned(
                                 // H61 (5812:106640)
-                                left: 19*fem,
-                                top: 0*fem,
+                                left: 19,
+                                top: 0,
                                 child: Align(
                                   child: SizedBox(
-                                    width: 47*fem,
-                                    height: 18*fem,
+                                    width: 47,
+                                    height: 18,
                                     child: Text(
                                       'خدمات',
                                       textAlign: TextAlign.right,
                                       style: TextStyle (
                       fontFamily:                 'IRANSans',
-                                        fontSize: 14*ffem,
+                                        fontSize: 14,
                                         fontWeight: FontWeight.w600,
-                                        height: 1.2575*ffem/fem,
+                                        height: 1.2575,
                                         color: PosColors.dimGray,
                                       ),
                                     ),
@@ -182,46 +182,46 @@ class Scene extends StatelessWidget {
                           ),
                         ),
                         SizedBox(
-                          width: 4*fem,
+                          width: 4,
                         ),
                         Container(
                           // autogroup5ygdmG5 (BnM7d9dVYNJjzgZpka5Ygd)
-                          width: 74*fem,
+                          width: 74,
                           height: double.infinity,
                           child: Stack(
                             children: [
                               Positioned(
                                 // arrowleftlineariBK (5812:106641)
-                                left: 0*fem,
-                                top: 1*fem,
+                                left: 0,
+                                top: 1,
                                 child: Align(
                                   child: SizedBox(
-                                    width: 20*fem,
-                                    height: 20*fem,
+                                    width: 20,
+                                    height: 20,
                                     child: Image.asset(
                                       'assets/pos-final/images/arrow-left-linear-gPs.png',
-                                      width: 20*fem,
-                                      height: 20*fem,
+                                      width: 20,
+                                      height: 20,
                                     ),
                                   ),
                                 ),
                               ),
                               Positioned(
                                 // pVF (5812:106642)
-                                left: 13*fem,
-                                top: 0*fem,
+                                left: 13,
+                                top: 0,
                                 child: Align(
                                   child: SizedBox(
-                                    width: 61*fem,
-                                    height: 18*fem,
+                                    width: 61,
+                                    height: 18,
                                     child: Text(
                                       'تنظیمات',
                                       textAlign: TextAlign.right,
                                       style: TextStyle (
                       fontFamily:                 'IRANSans',
-                                        fontSize: 14*ffem,
+                                        fontSize: 14,
                                         fontWeight: FontWeight.w600,
-                                        height: 1.2575*ffem/fem,
+                                        height: 1.2575,
                                         color: PosColors.dimGray,
                                       ),
                                     ),
@@ -239,41 +239,41 @@ class Scene extends StatelessWidget {
             ),
             Container(
               // autogroupefmfiKj (BnM7kUkcWkSpD1kXzTEfmF)
-              margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 16*fem),
-              padding: EdgeInsets.fromLTRB(240*fem, 12*fem, 12*fem, 12*fem),
+              margin: EdgeInsets.fromLTRB(0, 0, 0, 16),
+              padding: EdgeInsets.fromLTRB(240, 12, 12, 12),
               width: double.infinity,
               decoration: BoxDecoration (
                 border: Border.all(color: Color(0xffd5d5d5)),
                color: PosColors.white,
-                borderRadius: BorderRadius.circular(5*fem),
+                borderRadius: BorderRadius.circular(5),
               ),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
                     // o6H (5812:106632)
-                    margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 8*fem, 3*fem),
+                    margin: EdgeInsets.fromLTRB(0, 0, 8, 3),
                     child: Text(
                       'ناباروری',
                       textAlign: TextAlign.right,
                       style: TextStyle (
                       fontFamily: 'IRANSans',
-                        fontSize: 14*ffem,
+                        fontSize: 14,
                         fontWeight: FontWeight.w500,
-                        height: 1.2575*ffem/fem,
+                        height: 1.2575,
                         color: Color(0xff515459),
                       ),
                     ),
                   ),
                   Container(
                     // vuesaxoutlinesearchnormal7Ms (5812:106633)
-                    margin: EdgeInsets.fromLTRB(0*fem, 1*fem, 0*fem, 0*fem),
-                    width: 20*fem,
-                    height: 20*fem,
+                    margin: EdgeInsets.fromLTRB(0, 1, 0, 0),
+                    width: 20,
+                    height: 20,
                     child: Image.asset(
                       'assets/pos-final/images/vuesax-outline-search-normal-Uzu.png',
-                      width: 20*fem,
-                      height: 20*fem,
+                      width: 20,
+                      height: 20,
                     ),
                   ),
                 ],
@@ -281,48 +281,48 @@ class Scene extends StatelessWidget {
             ),
             Container(
               // RNZ (5812:106635)
-              margin: EdgeInsets.fromLTRB(156*fem, 0*fem, 0*fem, 19*fem),
+              margin: EdgeInsets.fromLTRB(156, 0, 0, 19),
               child: Text(
                 'نتایج جستجو برای: ناباروری (1)',
                 textAlign: TextAlign.right,
                 style: SafeGoogleFont (
                   'IRANSans',
-                  fontSize: 14*ffem,
+                  fontSize: 14,
                   fontWeight: FontWeight.w500,
-                  height: 1.2575*ffem/fem,
+                  height: 1.2575,
                   color: PosColors.dimGray,
                 ),
               ),
             ),
             Container(
               // component12XAh (5812:106634)
-              padding: EdgeInsets.fromLTRB(16*fem, 16*fem, 16*fem, 19*fem),
+              padding: EdgeInsets.fromLTRB(16, 16, 16, 19),
               width: double.infinity,
               decoration: BoxDecoration (
                 border: Border.all(color: Color(0xffd4d4d4)),
                color: PosColors.white,
-                borderRadius: BorderRadius.circular(5*fem),
+                borderRadius: BorderRadius.circular(5),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
                     // autogroupeisw27T (BnM8K3egUAzjCSMbxCeisw)
-                    margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 15*fem),
+                    margin: EdgeInsets.fromLTRB(0, 0, 0, 15),
                     width: double.infinity,
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Container(
                           // Z7P (I5812:106634;5812:106952)
-                          margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 167*fem, 0*fem),
+                          margin: EdgeInsets.fromLTRB(0, 0, 167, 0),
                           child: Text(
                             'ناباروری',
                             style: TextStyle (
                       fontFamily:       'IRANSans',
-                              fontSize: 14*ffem,
+                              fontSize: 14,
                               fontWeight: FontWeight.w600,
-                              height: 1.2575*ffem/fem,
+                              height: 1.2575,
                               color: Color(0xff515151),
                             ),
                           ),
@@ -333,9 +333,9 @@ class Scene extends StatelessWidget {
                           textAlign: TextAlign.right,
                           style: TextStyle (
                       fontFamily:     'IRANSans',
-                            fontSize: 14*ffem,
+                            fontSize: 14,
                             fontWeight: FontWeight.w600,
-                            height: 1.2575*ffem/fem,
+                            height: 1.2575,
                             color: Color(0xff515151),
                           ),
                         ),
@@ -344,30 +344,30 @@ class Scene extends StatelessWidget {
                   ),
                   Container(
                     // line1oGd (I5812:106634;5812:106954)
-                    margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 11*fem),
+                    margin: EdgeInsets.fromLTRB(0, 0, 0, 11),
                     width: double.infinity,
-                    height: 1*fem,
+                    height: 1,
                     decoration: BoxDecoration (
                       color: Color(0xffd5d5d5),
                     ),
                   ),
                   Container(
                     // autogroupftkj8Ju (BnM8RTdfKWNHtE9E36fTKj)
-                    margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 15*fem),
+                    margin: EdgeInsets.fromLTRB(0, 0, 0, 15),
                     width: double.infinity,
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Container(
                           // FeR (I5812:106634;5812:106953)
-                          margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 114*fem, 0*fem),
+                          margin: EdgeInsets.fromLTRB(0, 0, 114, 0),
                           child: Text(
                             '2,000,000 ریال',
                             style: TextStyle (
                       fontFamily:       'IRANSans',
-                              fontSize: 14*ffem,
+                              fontSize: 14,
                               fontWeight: FontWeight.w600,
-                              height: 1.2575*ffem/fem,
+                              height: 1.2575,
                               color: Color(0xff515151),
                             ),
                           ),
@@ -378,9 +378,9 @@ class Scene extends StatelessWidget {
                           textAlign: TextAlign.right,
                           style: TextStyle (
                       fontFamily:     'IRANSans',
-                            fontSize: 14*ffem,
+                            fontSize: 14,
                             fontWeight: FontWeight.w600,
-                            height: 1.2575*ffem/fem,
+                            height: 1.2575,
                             color: Color(0xff515151),
                           ),
                         ),
@@ -389,9 +389,9 @@ class Scene extends StatelessWidget {
                   ),
                   Container(
                     // line2uiy (I5812:106634;5812:106955)
-                    margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 11*fem),
+                    margin: EdgeInsets.fromLTRB(0, 0, 0, 11),
                     width: double.infinity,
-                    height: 1*fem,
+                    height: 1,
                     decoration: BoxDecoration (
                       color: Color(0xffd5d5d5),
                     ),
@@ -402,9 +402,9 @@ class Scene extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: SafeGoogleFont (
                       'IRANSans',
-                      fontSize: 14*ffem,
+                      fontSize: 14,
                       fontWeight: FontWeight.w600,
-                      height: 1.2575*ffem/fem,
+                      height: 1.2575,
                       color: Color(0xff3568d4),
                     ),
                   ),

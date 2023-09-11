@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-enum AviTextStyle {
+enum TextStyles {
   font18,
   font16,
   font14,
@@ -8,14 +8,14 @@ enum AviTextStyle {
   ;
 }
 
-extension AviTextStyleExtension on AviTextStyle {
+extension AviTextStyleExtension on TextStyles {
   TextStyle? style(Color color,{
     double size=16,
     fontWeight = FontWeight.w500,
     height= 1.5
   }) {
     switch (this) {
-      case AviTextStyle.font18:
+      case TextStyles.font18:
         return TextStyle(
           fontFamily: 'IRANSans',
           fontSize: 18,
@@ -23,7 +23,7 @@ extension AviTextStyleExtension on AviTextStyle {
           height: 1.5,
           color: color,
         );
-      case AviTextStyle.font16:
+      case TextStyles.font16:
         return TextStyle(
           fontFamily: 'IRANSans',
           fontSize: 16,
@@ -31,7 +31,7 @@ extension AviTextStyleExtension on AviTextStyle {
           height: 1.5,
           color: color,
         );
-      case AviTextStyle.font14:
+      case TextStyles.font14:
       return TextStyle(
         fontFamily: 'IRANSans',
         fontSize: 14,

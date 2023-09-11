@@ -25,6 +25,7 @@ class BottomButton extends StatelessWidget {
   final double radius;
   final VoidCallback? onPressed;
 
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -48,7 +49,7 @@ class BottomButton extends StatelessWidget {
           child: Text(
             text,
             textAlign: TextAlign.right,
-            style: AviTextStyle.font16.style(
+            style: TextStyles.font16.style(
               textColor,
             ),
           ),

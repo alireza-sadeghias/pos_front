@@ -23,7 +23,7 @@ class UserApi {
       InterceptorsWrapper(
         onRequest: (options, handler) async {
           String? userToken = await getUserToken();
-          String? clientIpAddress = await Utility.getLocalIpAddress();
+          String? clientIpAddress = await IpAddressUtility.getLocalIpAddress();
           if (userToken != null) {
             options.headers.addAll({
               'clientIPAddress': clientIpAddress,

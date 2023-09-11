@@ -19,6 +19,7 @@ class LandingPageContainer extends StatelessWidget {
   final List<Text> headers;
   final Image logo;
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +29,7 @@ class LandingPageContainer extends StatelessWidget {
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight( 8 ),
           child: Container(
-            color: PosColors.lightGrey,
+            color: PosColors.lightGray,
             height: 1,
           ),
         ),

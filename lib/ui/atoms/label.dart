@@ -15,12 +15,13 @@ class Label extends StatelessWidget{
   final double? fontSize;
   final Color? color;
 
+
   @override
   Widget build(BuildContext context){
     return Text(
       text,
       textAlign: TextAlign.right,
-      style: AviTextStyle.font14.style(
+      style: TextStyles.font14.style(
        color!
       ),
     );

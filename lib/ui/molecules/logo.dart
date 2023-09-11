@@ -6,6 +6,7 @@ import '../token/font.dart';
 class BrandDetail extends StatelessWidget{
   const BrandDetail({super.key});
 
+
   @override
   Widget build(BuildContext context) {
     return Row(

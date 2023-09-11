@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:pos/ui/molecules/price_text.dart';
 import 'package:pos/ui/atoms/line.dart';
-import 'package:pos/ui/molecules/text_row.dart';
 
 import '../foundation/text_style.dart';
+import '../molecules/price_widgets.dart';
+import '../molecules/text_widgets.dart';
 import '../token/pos_colors.dart';
 
 class ServiceInfoOperations extends StatelessWidget {
@@ -16,6 +16,7 @@ class ServiceInfoOperations extends StatelessWidget {
 
   final EdgeInsets? padding;
   final EdgeInsets? margin;
+
 
   @override
   Widget build(BuildContext context) {
@@ -36,12 +37,12 @@ class ServiceInfoOperations extends StatelessWidget {
                 'نام خدمت:',
                 textAlign: TextAlign.right,
                 style:
-                    AviTextStyle.font.style(PosColors.darkCharcoal, size: 15),
+                    TextStyles.font.style(PosColors.darkCharcoal, size: 15),
               ),
               Text(
                 'دیفن هیدرامین',
                 style:
-                    AviTextStyle.font.style(PosColors.darkCharcoal, size: 15),
+                    TextStyles.font.style(PosColors.darkCharcoal, size: 15),
               ),
             ],
           ),
@@ -54,12 +55,12 @@ class ServiceInfoOperations extends StatelessWidget {
                 'تعرفه خدمت:',
                 textAlign: TextAlign.right,
                 style:
-                    AviTextStyle.font.style(PosColors.darkCharcoal, size: 15),
+                    TextStyles.font.style(PosColors.darkCharcoal, size: 15),
               ),
               PriceText(
                 20000,
                 style:
-                    AviTextStyle.font.style(PosColors.darkCharcoal, size: 15),
+                    TextStyles.font.style(PosColors.darkCharcoal, size: 15),
               ),
             ],
           ),
@@ -70,7 +71,7 @@ class ServiceInfoOperations extends StatelessWidget {
             children: [
               TextButton(
                 child: Text('حذف',
-                    style: AviTextStyle.font16.style(PosColors.brightShadeRed)),
+                    style: TextStyles.font16.style(PosColors.brightShadeRed)),
                 onPressed: () {},
               ),
               const Line(
@@ -83,7 +84,7 @@ class ServiceInfoOperations extends StatelessWidget {
               TextButton(
                 child: Text('ویرایش',
                     textAlign: TextAlign.center,
-                    style: AviTextStyle.font16
+                    style: TextStyles.font16
                         .style(PosColors.mediumDarkShadeBlue)),
                 onPressed: () {},
               )

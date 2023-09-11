@@ -8,6 +8,7 @@ class AuthenticationDto{
     return AuthenticationDto(message: json['token']);
   }
 
+
   @override
   String toString() {
     return 'Authentication dto message: $message.';

@@ -10,6 +10,7 @@ class FetchTokenDto {
 
   FetchTokenDto();
 
+
   @override
   String toString() {
     return 'FetchDto username: $username, terminalId: $terminalId, password: $password.';

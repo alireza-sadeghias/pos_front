@@ -3,7 +3,9 @@ import 'package:logger/logger.dart';
 import 'package:pos/ui/token/pos_colors.dart';
 var logger = Logger(printer: LogfmtPrinter());
 class Scene extends StatelessWidget {
-  const Scene({super.key});@override
+  const Scene({super.key});
+
+@override
   Widget build(BuildContext context) {
     double baseWidth = 53;
     double fem = MediaQuery.of(context).size.width / baseWidth;
@@ -11,11 +13,11 @@ class Scene extends StatelessWidget {
       width: double.infinity,
       child: Container(
         // rectangle29SYy (5812:106857)
-        padding: EdgeInsets.fromLTRB(16*fem, 16*fem, 16*fem, 16*fem),
+        padding: EdgeInsets.fromLTRB(16, 16, 16, 16),
         width: double.infinity,
         decoration: BoxDecoration (
           border: Border.all(color: Color(0xff9747ff)),
-          borderRadius: BorderRadius.circular(5*fem),
+          borderRadius: BorderRadius.circular(5),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -27,10 +29,10 @@ class Scene extends StatelessWidget {
                 // rectangle29hjo (5812:106859)
                 child: SizedBox(
                   width: double.infinity,
-                  height: 21*fem,
+                  height: 21,
                   child: Container(
                     decoration: BoxDecoration (
-                      borderRadius: BorderRadius.circular(2*fem),
+                      borderRadius: BorderRadius.circular(2),
                       border: Border.all(color: Color(0xff9747ff)),
                color: PosColors.white,
                     ),
@@ -39,20 +41,20 @@ class Scene extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 16*fem,
+              height: 16,
             ),
             Container(
               // property1variant2QPK (5812:106860)
-              width: 21*fem,
-              height: 21*fem,
+              width: 21,
+              height: 21,
               child: Image.asset(
                 'assets/pos-final/images/property-1variant2-33f.png',
-                width: 21*fem,
-                height: 21*fem,
+                width: 21,
+                height: 21,
               ),
             ),
             SizedBox(
-              height: 16*fem,
+              height: 16,
             ),
             Container(
               // property1variant37oX (5812:106863)
@@ -61,10 +63,10 @@ class Scene extends StatelessWidget {
                 // rectangle295VT (5812:106864)
                 child: SizedBox(
                   width: double.infinity,
-                  height: 21*fem,
+                  height: 21,
                   child: Container(
                     decoration: BoxDecoration (
-                      borderRadius: BorderRadius.circular(2*fem),
+                      borderRadius: BorderRadius.circular(2),
                       border: Border.all(color: Color(0xffd5d5d5)),
                color: PosColors.white,
                     ),

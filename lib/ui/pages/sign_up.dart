@@ -20,6 +20,7 @@ var logger = Logger(printer: LogfmtPrinter());
 class SignUp extends StatelessWidget {
   const SignUp({super.key});
 
+
   @override
   Widget build(BuildContext context) {
     return LoginContainer(
@@ -33,7 +34,7 @@ class SignUp extends StatelessWidget {
             Text(
               'لطفا اطلاعات خود را کامل کنید',
               textAlign: TextAlign.right,
-              style: AviTextStyle.font16.style(PosColors.dimGray),
+              style: TextStyles.font16.style(PosColors.dimGray),
             ),
             const SizedBox(
               height: 20,
@@ -41,7 +42,7 @@ class SignUp extends StatelessWidget {
             Text(
               'شماره ملی',
               textAlign: TextAlign.right,
-              style: AviTextStyle.font16.style(PosColors.dimGray),
+              style: TextStyles.font16.style(PosColors.dimGray),
             ),
             TextField(
               keyboardType: TextInputType.number,
@@ -50,7 +51,7 @@ class SignUp extends StatelessWidget {
               ],
               textAlign: TextAlign.right,
               maxLines: 1,
-              style: AviTextStyle.font14.style(PosColors.dimGray),
+              style: TextStyles.font14.style(PosColors.dimGray),
               decoration: const InputDecoration(
                 constraints: BoxConstraints(
                   maxHeight: 40,
@@ -67,7 +68,7 @@ class SignUp extends StatelessWidget {
             Text(
               'شماره همراه',
               textAlign: TextAlign.right,
-              style: AviTextStyle.font16.style(PosColors.dimGray),
+              style: TextStyles.font16.style(PosColors.dimGray),
             ),
             TextField(
               keyboardType: TextInputType.number,
@@ -76,7 +77,7 @@ class SignUp extends StatelessWidget {
               ],
               textAlign: TextAlign.right,
               maxLines: 1,
-              style: AviTextStyle.font14.style(PosColors.dimGray),
+              style: TextStyles.font14.style(PosColors.dimGray),
               decoration: const InputDecoration(
                 constraints: BoxConstraints(
                   maxHeight: 40,
@@ -93,7 +94,7 @@ class SignUp extends StatelessWidget {
             Text(
               'نوع نظام',
               textAlign: TextAlign.right,
-              style: AviTextStyle.font16.style(PosColors.dimGray),
+              style: TextStyles.font16.style(PosColors.dimGray),
             ),
             DropDownSelection(placeHolder: 'نوع نظام را انتخاب کنید'
                 // ,items: nameOfNezamList
@@ -104,7 +105,7 @@ class SignUp extends StatelessWidget {
             Text(
               'شماره نظام پزشکی',
               textAlign: TextAlign.right,
-              style: AviTextStyle.font16.style(PosColors.dimGray),
+              style: TextStyles.font16.style(PosColors.dimGray),
             ),
             TextField(
               textAlign: TextAlign.right,
@@ -113,7 +114,7 @@ class SignUp extends StatelessWidget {
               inputFormatters: <TextInputFormatter>[
                 FilteringTextInputFormatter.digitsOnly
               ],
-              style: AviTextStyle.font14.style(PosColors.dimGray),
+              style: TextStyles.font14.style(PosColors.dimGray),
               decoration: const InputDecoration(
                 constraints: BoxConstraints(
                   maxHeight: 40,
@@ -141,7 +142,7 @@ class SignUp extends StatelessWidget {
                   child: Text(
                     'مرحله بعد',
                     textAlign: TextAlign.right,
-                    style: AviTextStyle.font.style(PosColors.white,fontWeight: FontWeight.w700, ),
+                    style: TextStyles.font.style(PosColors.white,fontWeight: FontWeight.w700, ),
                   ),
                 ),
               ),

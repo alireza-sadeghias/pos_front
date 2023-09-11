@@ -5,6 +5,7 @@ import '../atoms/otp_input_cell.dart';
 class OtpRow extends StatefulWidget {
   const OtpRow({Key? key}) : super(key: key);
 
+
   @override
   State<OtpRow> createState() => _OtpRowState();
 
@@ -18,6 +19,7 @@ class _OtpRowState extends State<OtpRow> {
   final TextEditingController _fieldFour = TextEditingController();
   final TextEditingController _fieldFive = TextEditingController();
   final TextEditingController _fieldSix = TextEditingController();
+
 
   @override
   Widget build(BuildContext context) {

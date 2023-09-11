@@ -8,9 +8,13 @@ var logger = Logger(printer: LogfmtPrinter());
 
 class SettingServiceModifyPickCategory extends StatelessWidget {
 
-  const SettingServiceModifyPickCategory({super.key,required this.onPressed});
+  const SettingServiceModifyPickCategory({
+    super.key,
+    required this.children,
+  });
 
-  final VoidCallback? onPressed;
+  final List<Widget> children;
+
 
   @override
   Widget build(BuildContext context) {
@@ -22,43 +26,36 @@ class SettingServiceModifyPickCategory extends StatelessWidget {
         ListTile(
           title: const Text('این خدمت جز کدام دسته بندی است؟',
               textAlign: TextAlign.end),
-          onTap: () {
-          },
+          onTap: () {},
         ),
         ListTile(
           title: BottomButton(
               text: 'اصلی',
-              textColor: PosColors.dimGrey,
+              textColor: PosColors.dimGray,
               foregroundColor: PosColors.white,
-              borderColor: PosColors.dimGrey,
+              borderColor: PosColors.dimGray,
               margin: 4,
               onPressed: () {}),
-          onTap: () {
-          },
+          onTap: () {},
         ),
         ListTile(
           title: BottomButton(
             text: 'فرعی',
-            textColor: PosColors.dimGrey,
+            textColor: PosColors.dimGray,
             foregroundColor: PosColors.white,
-            borderColor: PosColors.dimGrey,
+            borderColor: PosColors.dimGray,
             onPressed: () {},
             margin: 4,
           ),
-          onTap: () {
-          },
+          onTap: () {},
         ),
         ListTile(
-          title: BottomButton(
-            text: 'مرحله بعد',
-            textColor: PosColors.white,
-            foregroundColor: PosColors.vermilion,
-            onPressed: onPressed,
-            margin: 4,
+          title: ButtonBar(
+            alignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              ...children
+            ],
           ),
-          onTap: () {
-
-          },
         ),
       ],
     );

@@ -8,6 +8,7 @@ class OtpInput extends StatelessWidget {
   final bool autoFocus;
   const OtpInput(this.controller, this.autoFocus, {Key? key}) : super(key: key);
 
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(

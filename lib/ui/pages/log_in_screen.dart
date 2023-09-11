@@ -10,6 +10,7 @@ var logger = Logger(printer: LogfmtPrinter());
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
+
   @override
   Widget build(BuildContext context) {
 
@@ -28,7 +29,7 @@ class LoginScreen extends StatelessWidget {
           Text(
             'لطفا اطلاعات خود را کامل کنید',
             textAlign: TextAlign.right,
-            style: AviTextStyle.font14.style(PosColors.dimGrey),
+            style: TextStyles.font14.style(PosColors.dimGray),
           ),
           const SizedBox(
             height: 20,

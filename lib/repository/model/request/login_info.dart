@@ -22,10 +22,12 @@ class LoginInfo {
     };
   }
 
+
   @override
   String toString() {
     return 'FetchUserInfo{cellPhoneNumber: $cellPhoneNumber, nationalNumber: $nationalNumber}';
   }
+
 
   @override
   bool operator ==(Object other) =>
@@ -34,6 +36,7 @@ class LoginInfo {
           runtimeType == other.runtimeType &&
           cellPhoneNumber == other.cellPhoneNumber &&
           nationalNumber == other.nationalNumber;
+
 
   @override
   int get hashCode =>

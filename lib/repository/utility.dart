@@ -1,13 +1,9 @@
 import 'dart:io';
+import 'package:logger/logger.dart';
 
+var logger = Logger(printer: LogfmtPrinter());
 
-void main() async {
-
-  String val = await Utility.getLocalIpAddress();
-  print(val);
-
-}
-class Utility {
+class IpAddressUtility {
   static Future<String> getLocalIpAddress() async {
     final interfaces = await NetworkInterface.list(
         type: InternetAddressType.IPv4, includeLinkLocal: true);
@@ -35,4 +31,41 @@ class Utility {
       }
     }
   }
+}
+
+class NationalNumberUtility {
+  static bool isValidIranianNationalNumber(String input) {
+    if (input == null || input.length != 10 || !input.contains(RegExp(r'^\d{10}$'))) {
+      return false;
+    }
+
+    List<int> digits = input.split('').map((e) => int.parse(e)).toList();
+
+    int check = digits[9];
+    int sum = 0;
+    for (int i = 0; i < 9; i++) {
+      sum += digits[i] * (10 - i);
+    }
+
+    int remainder = sum % 11;
+
+    if (remainder < 2) {
+      return check == remainder;
+    } else {
+      return check == 11 - remainder;
+    }
+  }
+
+}
+
+void main() async {
+  // String val = await IpAddressUtility.getLocalIpAddress();
+  // logger.i(val);
+  // Test the function with some examples
+  logger.i('is valid ${NationalNumberUtility.isValidIranianNationalNumber('0430003218')}'); // Should return false
+  logger.i('is valid ${NationalNumberUtility.isValidIranianNationalNumber('1111111111')}'); // Should return true
+  logger.i('is valid ${NationalNumberUtility.isValidIranianNationalNumber('0084710152')}'); // Should return false
+  logger.i('is valid ${NationalNumberUtility.isValidIranianNationalNumber('0439096650')}'); // Should return false
+  logger.i('is valid ${NationalNumberUtility.isValidIranianNationalNumber('2222222222')}'); // Should return false
+  logger.i('is valid ${NationalNumberUtility.isValidIranianNationalNumber('2222222211')}'); // Should return false
 }

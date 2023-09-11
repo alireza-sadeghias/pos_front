@@ -6,6 +6,7 @@ import 'package:pos/ui/token/pos_colors.dart';
 class SwitchButton extends StatelessWidget {
   const SwitchButton({super.key});
 
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -27,7 +28,7 @@ class SwitchButton extends StatelessWidget {
                   child: Text(
                     'سایر',
                     textAlign: TextAlign.center,
-                    style: AviTextStyle.font18.style(PosColors.dimGray),
+                    style: TextStyles.font18.style(PosColors.dimGray),
                   ))),
           Container(
             color: PosColors.whiteGray,
@@ -40,7 +41,7 @@ class SwitchButton extends StatelessWidget {
               child: Text(
                 'تامین اجتماعی',
                 textAlign: TextAlign.center,
-                style: AviTextStyle.font18.style(PosColors.dimGray),
+                style: TextStyles.font18.style(PosColors.dimGray),
               ),
             ),
           ),
@@ -66,7 +67,7 @@ class SwitchButton extends StatelessWidget {
                   child: Text(
                     'بیمه سلامت',
                     textAlign: TextAlign.center,
-                    style: AviTextStyle.font16.style(PosColors.dimGray),
+                    style: TextStyles.font16.style(PosColors.dimGray),
                   ),
                 )),
           ),

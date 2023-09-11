@@ -7,6 +7,7 @@ class TokenState extends Equatable {
     this.submissionStatus = SubmissionStatus.idle,
   });
 
+
   @override
   List<Object?> get props => [
         submissionStatus,

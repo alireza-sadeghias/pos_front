@@ -9,8 +9,8 @@ class CardButton extends StatelessWidget{
     super.key,
     this.height =160,
     this.width = 160,
-    this.margin = 24,
-    this.padding = 24,
+    this.margin = 18,
+    this.padding = 18,
     this.borderColor= PosColors.cadetBlue,
     this.backgroundColor=PosColors.cadetBlue,
     required this.image,
@@ -25,6 +25,7 @@ class CardButton extends StatelessWidget{
   final Color backgroundColor;
   final Image image;
   final Text text;
+
 
   @override
   Widget build(BuildContext context) {
@@ -44,11 +45,10 @@ class CardButton extends StatelessWidget{
           height: double.infinity,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
                 margin: const EdgeInsets.all(8),
-                // width: 48,
-                // height: 48,
                 child: image,
               ),
               text,

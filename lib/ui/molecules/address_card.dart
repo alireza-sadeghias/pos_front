@@ -8,6 +8,7 @@ class AddressCard extends StatelessWidget {
   final String address;
   final bool isSelected;
 
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,11 +17,11 @@ class AddressCard extends StatelessWidget {
       decoration: BoxDecoration(
         border: Border.all(
             color: isSelected ? PosColors.darkViolet : PosColors.azureGray),
-        color: PosColors.deepGrey,
+        color: PosColors.deepGray,
         borderRadius: BorderRadius.circular(8),
         boxShadow: const [
           BoxShadow(
-            color: PosColors.deepGrey,
+            color: PosColors.deepGray,
             offset: Offset(0, 3),
             blurRadius: 2.5,
           ),
@@ -35,11 +36,11 @@ class AddressCard extends StatelessWidget {
             child: RichText(
               textAlign: TextAlign.right,
               text: TextSpan(
-                style: AviTextStyle.font14.style(isSelected ? PosColors.darkViolet : PosColors.azureGray,),
+                style: TextStyles.font14.style(isSelected ? PosColors.darkViolet : PosColors.azureGray,),
                 children: [
                   TextSpan(
                     text: address,
-                    style: AviTextStyle.font14.style(isSelected? PosColors.darkViolet: PosColors.azureGray,),
+                    style: TextStyles.font14.style(isSelected? PosColors.darkViolet: PosColors.azureGray,),
                   ),
                 ],
               ),

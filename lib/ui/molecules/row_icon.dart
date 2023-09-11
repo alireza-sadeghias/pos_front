@@ -15,7 +15,7 @@ class RowIcon extends StatelessWidget {
       this.hasDivider = false});
 
   final bool hasDivider;
-  final Widget icon;
+  final Widget? icon;
   final String text;
   final TextStyle? style;
   final double right;
@@ -23,6 +23,7 @@ class RowIcon extends StatelessWidget {
   final double top;
   final double bottom;
   final VoidCallback? onPressed;
+
 
   @override
   Widget build(BuildContext context) {

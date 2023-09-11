@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pos/ui/molecules/price_text.dart';
 
 import '../foundation/text_style.dart';
+import '../molecules/price_widgets.dart';
 import '../token/pos_colors.dart';
 
 class ServiceInfoAbstractDetail extends StatelessWidget {
@@ -13,6 +13,7 @@ class ServiceInfoAbstractDetail extends StatelessWidget {
 
   final String serviceName;
   final int price;
+
 
   @override
   Widget build(BuildContext context) {
@@ -28,13 +29,13 @@ class ServiceInfoAbstractDetail extends StatelessWidget {
             children: [
               Text('نام خدمت:',
                   textAlign: TextAlign.right,
-                  style: AviTextStyle.font14.style(PosColors.dimGrey)),
+                  style: TextStyles.font14.style(PosColors.dimGray)),
               Text(serviceName,
-                  style: AviTextStyle.font14.style(PosColors.dimGrey)),
+                  style: TextStyles.font14.style(PosColors.dimGray)),
             ],
           ),
         ),
-        const Divider(height: 1, color: PosColors.dimGrey, thickness: 1),
+        const Divider(height: 1, color: PosColors.dimGray, thickness: 1),
         Container(height: 6, margin: const EdgeInsets.symmetric(vertical: 4)),
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -42,9 +43,9 @@ class ServiceInfoAbstractDetail extends StatelessWidget {
           children: [
             Text('تعرفه خدمت:',
                 textAlign: TextAlign.right,
-                style: AviTextStyle.font14.style(PosColors.dimGrey)),
+                style: TextStyles.font14.style(PosColors.dimGray)),
             PriceText(price,
-                style: AviTextStyle.font14.style(PosColors.dimGrey)),
+                style: TextStyles.font14.style(PosColors.dimGray)),
           ],
         ),
         const SizedBox(

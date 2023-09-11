@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:intl/intl.dart';
 import 'package:pos/ui/token/pos_colors.dart';
 
 import '../foundation/number_formats.dart';
@@ -11,9 +12,9 @@ class PriceTextField extends StatefulWidget{
   @override
   State<StatefulWidget> createState()  => _PriceTextFieldState();
 
-  final String text;
+  final String? text;
 
-  const PriceTextField(this.text, {super.key});
+  const PriceTextField({this.text,super.key});
 }
 
 class _PriceTextFieldState extends State<PriceTextField> {
@@ -22,16 +23,18 @@ class _PriceTextFieldState extends State<PriceTextField> {
 
   int get price => _price;
 
+
   @override
   Widget build(BuildContext context) {
     return Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            widget.text,
+          if(widget.text!=null)
+            Text(
+            widget.text!,
             textAlign: TextAlign.right,
-            style: AviTextStyle.font16.style(PosColors.dimGray),
+            style: TextStyles.font16.style(PosColors.dimGray),
           ),
           TextField(
             keyboardType: TextInputType.number,
@@ -51,13 +54,15 @@ class _PriceTextFieldState extends State<PriceTextField> {
             ],
             textAlign: TextAlign.right,
             maxLines: 1,
-            style: AviTextStyle.font14.style(PosColors.dimGray),
+            style: TextStyles.font14.style(PosColors.dimGray),
             decoration: const InputDecoration(
               constraints: BoxConstraints(
                 maxHeight: 40,
               ),
               contentPadding: EdgeInsets.symmetric(vertical: 5, horizontal: 5),
-              border: OutlineInputBorder(),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.all(Radius.circular(5))
+              ),
             ),
             onChanged: (value){
               logger.i('on change is $value');
@@ -71,8 +76,38 @@ class _PriceTextFieldState extends State<PriceTextField> {
           Text(
             '${const NumberFormatter().convertToPersianText(price)} تومان ',
             textAlign: TextAlign.right,
-            style: AviTextStyle.font16.style(PosColors.dimGray),
+            style: TextStyles.font14.style(PosColors.dimGray),
           ),
         ]);
+  }
+}
+
+
+class PriceText extends StatelessWidget {
+
+  const PriceText(this.price,{
+    this.style ,
+    this.customPattern = '#,##0 ¤'  ,
+    this.locale = "fa_IR",
+    this.symbol = "ریال",
+    super.key,
+  });
+
+  final int price;
+  final TextStyle? style;
+  final String? customPattern;
+  final String? locale;
+  final String? symbol;
+
+
+  @override
+  Widget build(BuildContext context) {
+    NumberFormat rialFormat = NumberFormat.currency(
+      customPattern: customPattern,
+      locale: locale,
+      symbol: symbol,
+    );
+
+    return Text(style:style,rialFormat.format(price));
   }
 }

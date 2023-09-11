@@ -10,6 +10,7 @@ var logger = Logger(printer: LogfmtPrinter());
 class ClinicSelection extends StatelessWidget {
   const ClinicSelection({super.key});
 
+
   @override
   Widget build(BuildContext context) {
     return LoginContainer(
@@ -27,7 +28,7 @@ class ClinicSelection extends StatelessWidget {
               child: Text(
                 'مطب های ثبت شده برای شما',
                 textAlign: TextAlign.start,
-                style: AviTextStyle.font16.style(PosColors.dimGray),
+                style: TextStyles.font16.style(PosColors.dimGray),
               ),
             ),
           ),

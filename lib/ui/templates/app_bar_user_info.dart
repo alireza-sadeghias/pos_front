@@ -18,6 +18,7 @@ class UserInfo extends StatelessWidget {
   final Widget body;
   final IconData? icon;
   final VoidCallback? onPressed;
+
   @override
   Widget build(BuildContext context) {
     return LandingPageContainer(
@@ -28,9 +29,9 @@ class UserInfo extends StatelessWidget {
             ),
             headers: [
               Text("دکتر مریم محمودی",
-                  style: AviTextStyle.font18.style(PosColors.dimGrey)),
+                  style: TextStyles.font18.style(PosColors.dimGray)),
               Text("متخصص زنان و زایمان",
-                  style: AviTextStyle.font14.style(PosColors.dimGrey))
+                  style: TextStyles.font14.style(PosColors.dimGray))
             ],
             actionButton: IconButton(
               icon:

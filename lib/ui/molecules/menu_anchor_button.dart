@@ -9,12 +9,14 @@ class MenuAnchorButton extends StatefulWidget {
 
   const MenuAnchorButton({super.key, required this.textValues});
 
+
   @override
   State<MenuAnchorButton> createState() => _MenuAnchorButtonState();
 }
 
 class _MenuAnchorButtonState extends State<MenuAnchorButton> {
   // ActionItemContent? selectedMenu;
+
 
   @override
   Widget build(BuildContext context) {
@@ -50,12 +52,12 @@ class _MenuAnchorButtonState extends State<MenuAnchorButton> {
                 side: index == widget.textValues.length - 1
                     ? BorderSide.none
                     : const BorderSide(
-                        style: BorderStyle.solid, color: PosColors.dimGrey)),
+                        style: BorderStyle.solid, color: PosColors.dimGray)),
             alignment: AlignmentDirectional.centerStart,
           ),
           leadingIcon: Icon(
             widget.textValues[index].icon,
-            color: PosColors.dimGrey,
+            color: PosColors.dimGray,
           ),
           onPressed: () {
             final callback = widget.textValues[index].callback;
@@ -65,7 +67,7 @@ class _MenuAnchorButtonState extends State<MenuAnchorButton> {
           child: Text(
             widget.textValues[index].textValue,
             textAlign: TextAlign.right,
-            style: AviTextStyle.font14.style(PosColors.dimGrey),
+            style: TextStyles.font14.style(PosColors.dimGray),
           ),
         ),
       ),

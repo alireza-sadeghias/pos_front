@@ -19,6 +19,7 @@ class WrapperDto<T>{
     'info': info,
   };
 
+
   @override
   String toString() {
     return 'FetchDto resCode: $resCode, resMessage: $resMessage, info: $info.';

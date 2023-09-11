@@ -6,17 +6,17 @@ import 'package:pos/ui/token/font.dart';
 var logger = Logger(printer: LogfmtPrinter());
 
 class Scene extends StatelessWidget {
-  const Scene({super.key});@override
+  const Scene({super.key});
+
+@override
   Widget build(BuildContext context) {
-    double baseWidth = 360;
-    double fem = MediaQuery.of(context).size.width / baseWidth;
-    double ffem = fem * 0.97;
+    
     return Container(
       width: double.infinity,
       child: Container(
         // settingaddnewservicegbb (5812:106227)
         width: double.infinity,
-        height: 640 * fem,
+        height: 640 ,
         decoration: BoxDecoration(
           color: PosColors.white,
         ),
@@ -24,18 +24,18 @@ class Scene extends StatelessWidget {
           children: [
             Positioned(
               // 185 (5812:106228)
-              left: 283 * fem,
-              top: 102 * fem,
+              left: 283 ,
+              top: 102 ,
               child: Align(
                 child: SizedBox(
-                  width: 61 * fem,
-                  height: 18 * fem,
+                  width: 61 ,
+                  height: 18 ,
                   child: Text(
                     'تنظیمات',
                     textAlign: TextAlign.right,
                     style: SafeGoogleFont(
                       'IRANSans',
-                      fontSize: 14 * ffem,
+                      fontSize: 14 ,
                       fontWeight: FontWeight.w600,
                       height: 1.3,
                       color: PosColors.vermilion,
@@ -46,47 +46,47 @@ class Scene extends StatelessWidget {
             ),
             Positioned(
               // component75dj (5812:106229)
-              left: 16 * fem,
-              top: 16 * fem,
+              left: 16 ,
+              top: 16 ,
               child: Container(
-                width: 328 * fem,
-                height: 63 * fem,
+                width: 328 ,
+                height: 63 ,
                 child: Container(
                   // autogroup16jr23B (BnLHiXTNr2dkg21jew16JR)
                   width: double.infinity,
-                  height: 44 * fem,
+                  height: 44 ,
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Container(
                         // group9db (I5812:106229;5812:106905)
                         margin: EdgeInsets.fromLTRB(
-                            0 * fem, 2 * fem, 129 * fem, 0 * fem),
-                        width: 24 * fem,
-                        height: 24 * fem,
+                            0 , 2 , 129 , 0 ),
+                        width: 24 ,
+                        height: 24 ,
                         child: Image.asset(
                           'assets/pos-final/images/edit-2-linear.png',
-                          width: 24 * fem,
-                          height: 24 * fem,
+                          width: 24 ,
+                          height: 24 ,
                         ),
                       ),
                       Container(
                         // group88GTK (I5812:106229;5812:106901)
                         margin: EdgeInsets.fromLTRB(
-                            0 * fem, 0 * fem, 8 * fem, 1 * fem),
+                            0 , 0 , 8 , 1 ),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
                             Container(
                               // oTF (I5812:106229;5812:106902)
                               margin: EdgeInsets.fromLTRB(
-                                  0 * fem, 0 * fem, 0 * fem, 7 * fem),
+                                  0 , 0 , 0 , 7 ),
                               child: Text(
                                 'دکتر مریم محمودی',
                                 textAlign: TextAlign.right,
                                 style: SafeGoogleFont(
                                   'IRANSans',
-                                  fontSize: 14 * ffem,
+                                  fontSize: 14 ,
                                   fontWeight: FontWeight.w600,
                                   height: 1.3,
                                   color: PosColors.dimGray,
@@ -99,7 +99,7 @@ class Scene extends StatelessWidget {
                               textAlign: TextAlign.right,
                               style: SafeGoogleFont(
                                 'IRANSans',
-                                fontSize: 14 * ffem,
+                                fontSize: 14 ,
                                 fontWeight: FontWeight.w500,
                                 height: 1.3,
                                 color: PosColors.dimGray,
@@ -111,9 +111,9 @@ class Scene extends StatelessWidget {
                       Container(
                         // d50013Mb (I5812:106229;5812:106900)
                         margin: EdgeInsets.fromLTRB(
-                            0 * fem, 2 * fem, 0 * fem, 0 * fem),
-                        width: 40 * fem,
-                        height: 42 * fem,
+                            0 , 2 , 0 , 0 ),
+                        width: 40 ,
+                        height: 42 ,
                         child: Image.asset(
                           'assets/pos-final/images/logo.png',
                           fit: BoxFit.cover,
@@ -126,24 +126,24 @@ class Scene extends StatelessWidget {
             ),
             Positioned(
               // group102kWu (5812:106230)
-              left: 148 * fem,
-              top: 147 * fem,
+              left: 148 ,
+              top: 147 ,
               child: Container(
-                width: 196 * fem,
-                height: 20 * fem,
+                width: 196 ,
+                height: 20 ,
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
                       // GVF (5812:106231)
                       margin: EdgeInsets.fromLTRB(
-                          0 * fem, 0 * fem, 8 * fem, 0 * fem),
+                          0 , 0 , 8 , 0 ),
                       child: Text(
                         'تعریف خدمات و تعرفه ها',
                         textAlign: TextAlign.right,
                         style: SafeGoogleFont(
                           'IRANSans',
-                          fontSize: 14 * ffem,
+                          fontSize: 14 ,
                           fontWeight: FontWeight.w600,
                           height: 1.3,
                           color: PosColors.dimGray,
@@ -152,12 +152,12 @@ class Scene extends StatelessWidget {
                     ),
                     Container(
                       // edit2linearAqX (5812:106232)
-                      width: 20 * fem,
-                      height: 20 * fem,
+                      width: 20 ,
+                      height: 20 ,
                       child: Image.asset(
                         'assets/pos-final/images/edit-2-linear.png',
-                        width: 20 * fem,
-                        height: 20 * fem,
+                        width: 20 ,
+                        height: 20 ,
                       ),
                     ),
                   ],
@@ -166,22 +166,22 @@ class Scene extends StatelessWidget {
             ),
             Positioned(
               // group736z5 (5812:106233)
-              left: 16 * fem,
-              top: 225 * fem,
+              left: 16 ,
+              top: 225 ,
               child: Container(
-                width: 328 * fem,
-                height: 45 * fem,
+                width: 328 ,
+                height: 45 ,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5 * fem),
+                  borderRadius: BorderRadius.circular(5 ),
                 ),
                 child: Center(
                   // rectangle19E4h (5812:106234)
                   child: SizedBox(
                     width: double.infinity,
-                    height: 45 * fem,
+                    height: 45 ,
                     child: Container(
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5 * fem),
+                        borderRadius: BorderRadius.circular(5 ),
                         border: Border.all(color: Color(0xffd5d5d5)),
                         color: PosColors.white,
                       ),
@@ -192,18 +192,18 @@ class Scene extends StatelessWidget {
             ),
             Positioned(
               // koj (5812:106235)
-              left: 327 * fem,
-              top: 192 * fem,
+              left: 327 ,
+              top: 192 ,
               child: Align(
                 child: SizedBox(
-                  width: 17 * fem,
-                  height: 18 * fem,
+                  width: 17 ,
+                  height: 18 ,
                   child: Text(
                     'نام',
                     textAlign: TextAlign.right,
                     style: SafeGoogleFont(
                       'IRANSans',
-                      fontSize: 14 * ffem,
+                      fontSize: 14 ,
                       fontWeight: FontWeight.w500,
                       height: 1.3,
                       color: PosColors.dimGray,
@@ -214,18 +214,18 @@ class Scene extends StatelessWidget {
             ),
             Positioned(
               // FVb (5812:106236)
-              left: 310 * fem,
-              top: 286 * fem,
+              left: 310 ,
+              top: 286 ,
               child: Align(
                 child: SizedBox(
-                  width: 34 * fem,
-                  height: 18 * fem,
+                  width: 34 ,
+                  height: 18 ,
                   child: Text(
                     'تعرفه',
                     textAlign: TextAlign.right,
                     style: SafeGoogleFont(
                       'IRANSans',
-                      fontSize: 14 * ffem,
+                      fontSize: 14 ,
                       fontWeight: FontWeight.w500,
                       height: 1.3,
                       color: PosColors.dimGray,
@@ -236,15 +236,15 @@ class Scene extends StatelessWidget {
             ),
             Positioned(
               // rectangle19x97 (5812:106237)
-              left: 16 * fem,
-              top: 319 * fem,
+              left: 16 ,
+              top: 319 ,
               child: Align(
                 child: SizedBox(
-                  width: 328 * fem,
-                  height: 45 * fem,
+                  width: 328 ,
+                  height: 45 ,
                   child: Container(
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(4 * fem),
+                      borderRadius: BorderRadius.circular(4 ),
                       border: Border.all(color: PosColors.vermilion),
                       color: Color(0x1eef4023),
                     ),
@@ -254,17 +254,17 @@ class Scene extends StatelessWidget {
             ),
             Positioned(
               // FP7 (5812:106238)
-              left: 32 * fem,
-              top: 331 * fem,
+              left: 32 ,
+              top: 331 ,
               child: Align(
                 child: SizedBox(
-                  width: 92 * fem,
-                  height: 18 * fem,
+                  width: 92 ,
+                  height: 18 ,
                   child: Text(
                     '2,500,000 ریال',
                     style: SafeGoogleFont(
                       'IRANSans',
-                      fontSize: 14 * ffem,
+                      fontSize: 14 ,
                       fontWeight: FontWeight.w600,
                       height: 1.3,
                       color: PosColors.vermilion,
@@ -275,18 +275,18 @@ class Scene extends StatelessWidget {
             ),
             Positioned(
               // Yt1 (5812:106239)
-              left: 195 * fem,
-              top: 372 * fem,
+              left: 195 ,
+              top: 372 ,
               child: Align(
                 child: SizedBox(
-                  width: 149 * fem,
-                  height: 18 * fem,
+                  width: 149 ,
+                  height: 18 ,
                   child: Text(
                     'دویست و پنجاه هزار تومان',
                     textAlign: TextAlign.right,
                     style: SafeGoogleFont(
                       'IRANSans',
-                      fontSize: 14 * ffem,
+                      fontSize: 14 ,
                       fontWeight: FontWeight.w500,
                       height: 1.3,
                       color: Color(0xe55c8dfa),
@@ -297,14 +297,14 @@ class Scene extends StatelessWidget {
             ),
             Positioned(
               // frame1EVw (5812:106240)
-              left: 16 * fem,
-              top: 576 * fem,
+              left: 16 ,
+              top: 576 ,
               child: Container(
-                width: 328 * fem,
-                height: 48 * fem,
+                width: 328 ,
+                height: 48 ,
                 decoration: BoxDecoration(
                   color: PosColors.vermilion,
-                  borderRadius: BorderRadius.circular(5 * fem),
+                  borderRadius: BorderRadius.circular(5 ),
                 ),
                 child: Center(
                   child: Text(
@@ -312,7 +312,7 @@ class Scene extends StatelessWidget {
                     textAlign: TextAlign.right,
                     style: SafeGoogleFont(
                       'IRANSans',
-                      fontSize: 16 * ffem,
+                      fontSize: 16 ,
                       fontWeight: FontWeight.w700,
                       height: 1.3,
                       color: PosColors.white,
@@ -323,12 +323,12 @@ class Scene extends StatelessWidget {
             ),
             Positioned(
               // rectangle50K1b (5812:106242)
-              left: 0 * fem,
-              top: 0 * fem,
+              left: 0 ,
+              top: 0 ,
               child: Align(
                 child: SizedBox(
-                  width: 360 * fem,
-                  height: 640 * fem,
+                  width: 360 ,
+                  height: 640 ,
                   child: Container(
                     decoration: BoxDecoration(
                       color: Color(0x44000000),
@@ -339,24 +339,24 @@ class Scene extends StatelessWidget {
             ),
             Positioned(
               // group112EeM (5812:106243)
-              left: 0 * fem,
-              top: 392 * fem,
+              left: 0 ,
+              top: 392 ,
               child: Container(
                 padding:
-                    EdgeInsets.fromLTRB(16 * fem, 16 * fem, 16 * fem, 16 * fem),
-                width: 360 * fem,
-                height: 248 * fem,
+                    EdgeInsets.fromLTRB(16 , 16 , 16 , 16 ),
+                width: 360 ,
+                height: 248 ,
                 decoration: BoxDecoration(
                   color: PosColors.white,
                   borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(10 * fem),
-                    topRight: Radius.circular(10 * fem),
+                    topLeft: Radius.circular(10 ),
+                    topRight: Radius.circular(10 ),
                   ),
                   boxShadow: [
                     BoxShadow(
                       color: Color(0x3fafafaf),
-                      offset: Offset(0 * fem, 8 * fem),
-                      blurRadius: 12 * fem,
+                      offset: Offset(0 , 8 ),
+                      blurRadius: 12 ,
                     ),
                   ],
                 ),
@@ -366,13 +366,13 @@ class Scene extends StatelessWidget {
                     Container(
                       // 59B (5812:106245)
                       margin: EdgeInsets.fromLTRB(
-                          87 * fem, 0 * fem, 0 * fem, 27 * fem),
+                          87 , 0 , 0 , 27 ),
                       child: Text(
                         'این خدمت جز کدام دسته بندی است؟',
                         textAlign: TextAlign.right,
                         style: SafeGoogleFont(
                           'IRANSans',
-                          fontSize: 14 * ffem,
+                          fontSize: 14 ,
                           fontWeight: FontWeight.w600,
                           height: 1.3,
                           color: Color(0xff515151),
@@ -382,7 +382,7 @@ class Scene extends StatelessWidget {
                     Container(
                       // frame15BCD (5812:106246)
                       margin: EdgeInsets.fromLTRB(
-                          0 * fem, 0 * fem, 0 * fem, 12 * fem),
+                          0 , 0 , 0 , 12 ),
                       child: TextButton(
                         onPressed: () {},
                         style: TextButton.styleFrom(
@@ -390,11 +390,11 @@ class Scene extends StatelessWidget {
                         ),
                         child: Container(
                           width: double.infinity,
-                          height: 45 * fem,
+                          height: 45 ,
                           decoration: BoxDecoration(
                             border: Border.all(color: Color(0xffd5d5d5)),
                             color: PosColors.white,
-                            borderRadius: BorderRadius.circular(5 * fem),
+                            borderRadius: BorderRadius.circular(5 ),
                           ),
                           child: Center(
                             child: Text(
@@ -402,7 +402,7 @@ class Scene extends StatelessWidget {
                               textAlign: TextAlign.center,
                               style: SafeGoogleFont(
                                 'IRANSans',
-                                fontSize: 14 * ffem,
+                                fontSize: 14 ,
                                 fontWeight: FontWeight.w600,
                                 height: 1.3,
                                 color: Color(0xff515151),
@@ -415,7 +415,7 @@ class Scene extends StatelessWidget {
                     Container(
                       // frame162Tj (5812:106247)
                       margin: EdgeInsets.fromLTRB(
-                          0 * fem, 0 * fem, 0 * fem, 24 * fem),
+                          0 , 0 , 0 , 24 ),
                       child: TextButton(
                         onPressed: () {},
                         style: TextButton.styleFrom(
@@ -423,11 +423,11 @@ class Scene extends StatelessWidget {
                         ),
                         child: Container(
                           width: double.infinity,
-                          height: 45 * fem,
+                          height: 45 ,
                           decoration: BoxDecoration(
                             border: Border.all(color: Color(0xffd5d5d5)),
                             color: PosColors.white,
-                            borderRadius: BorderRadius.circular(5 * fem),
+                            borderRadius: BorderRadius.circular(5 ),
                           ),
                           child: Center(
                             child: Text(
@@ -435,7 +435,7 @@ class Scene extends StatelessWidget {
                               textAlign: TextAlign.center,
                               style: SafeGoogleFont(
                                 'IRANSans',
-                                fontSize: 14 * ffem,
+                                fontSize: 14 ,
                                 fontWeight: FontWeight.w600,
                                 height: 1.3,
                                 color: Color(0xff515151),
@@ -448,10 +448,10 @@ class Scene extends StatelessWidget {
                     Container(
                       // autogroupbfkj3dj (BnLJ7Wo5AgSARxunT7BFKj)
                       width: double.infinity,
-                      height: 45 * fem,
+                      height: 45 ,
                       decoration: BoxDecoration(
                         color: PosColors.vermilion,
-                        borderRadius: BorderRadius.circular(5 * fem),
+                        borderRadius: BorderRadius.circular(5 ),
                       ),
                       child: Center(
                         child: Text(
@@ -459,7 +459,7 @@ class Scene extends StatelessWidget {
                           textAlign: TextAlign.center,
                           style: SafeGoogleFont(
                             'IRANSans',
-                            fontSize: 14 * ffem,
+                            fontSize: 14 ,
                             fontWeight: FontWeight.w600,
                             height: 1.3,
                             color: PosColors.white,

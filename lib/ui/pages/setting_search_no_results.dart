@@ -9,6 +9,7 @@ var logger = Logger(printer: LogfmtPrinter());
 class SettingPageSearchNoResult extends StatelessWidget {
   const SettingPageSearchNoResult({super.key});
 
+
   @override
   Widget build(BuildContext context) {
     return Directionality(

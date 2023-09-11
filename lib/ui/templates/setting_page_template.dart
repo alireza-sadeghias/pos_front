@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:logger/logger.dart';
 import 'package:pos/ui/atoms/bottom_button.dart';
-import 'package:pos/ui/foundation/text_style.dart';
 import 'package:pos/ui/molecules/menu_anchor_button.dart';
-import 'package:pos/ui/molecules/row_icon.dart';
 import 'package:pos/ui/molecules/top_action_menu.dart';
 import 'package:pos/ui/pages/landing_page.dart';
 import 'package:pos/ui/pages/setting_page_define_service.dart';
@@ -22,11 +20,15 @@ class SettingServiceTemplate extends StatelessWidget {
   const SettingServiceTemplate({
     super.key,
     required this.widget,
-    required this.bottomButton
+    required this.bottomButton,
+    this.hasOption = true,
+    this.title ='تنظیمات',
   });
 
   final List<Widget> widget;
   final BottomButton bottomButton;
+  final String title;
+  final bool hasOption;
 
   @override
   Widget build(BuildContext context) {
@@ -75,21 +77,10 @@ class SettingServiceTemplate extends StatelessWidget {
                     width: double.infinity,
                     padding:
                         const EdgeInsets.only(top: 16, right: 16, left: 16),
-                    margin: const EdgeInsets.only(top: 32, bottom: 32),
+                    margin: const EdgeInsets.only(top: 32, bottom: 16),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        RowIcon(
-                          top: 0,
-                          icon: Image.asset(
-                            'assets/pos-final/images/edit-2-linear.png',
-                            width: 20,
-                            height: 20,
-                          ),
-                          text: 'تعریف خدمات و تعرفه ها',
-                          style: AviTextStyle.font14.style(PosColors.dimGrey),
-                          onPressed: () => {},
-                        ),
                         ...widget,
                         const SizedBox(
                           height: 60,
@@ -100,20 +91,15 @@ class SettingServiceTemplate extends StatelessWidget {
                 ],
               ),
             ),
-            Positioned(
-              top: 0,
-              left: 0,
-              right: 0,
-              child: Container(
-                decoration: const BoxDecoration(
-                  color: PosColors.background,
-                ),
-                margin: const EdgeInsets.only(left: 0, right: 0, bottom: 16),
-                padding: const EdgeInsets.only(left: 32, right: 32),
-                child: TopActionMenu(
-                  text: 'تنظیمات',
-                  iconWidget: MenuAnchorButton(textValues: textValues),
-                ),
+            Container(
+              decoration: const BoxDecoration(
+                color: PosColors.background,
+              ),
+              padding: const EdgeInsets.only(left: 32, right: 16),
+              child: TopActionMenu(
+                hasOption: hasOption,
+                text: title,
+                iconWidget: MenuAnchorButton(textValues: textValues),
               ),
             ),
             Align(

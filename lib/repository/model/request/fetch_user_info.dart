@@ -25,10 +25,12 @@ class FetchUserInfo {
     };
   }
 
+
   @override
   String toString() {
     return 'FetchUserInfo{cellPhoneNumber: $cellPhoneNumber, nationalNumber: $nationalNumber, otp: $otp}';
   }
+
 
   @override
   bool operator ==(Object other) =>
@@ -38,6 +40,7 @@ class FetchUserInfo {
           cellPhoneNumber == other.cellPhoneNumber &&
           nationalNumber == other.nationalNumber &&
           otp == other.otp;
+
 
   @override
   int get hashCode =>

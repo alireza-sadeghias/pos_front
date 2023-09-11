@@ -17,10 +17,12 @@ class HealthItem {
   // final String generic;
   // final String nationalNumber;
 
+
   @override
   String toString() {
     return '$persianName, $englishName';
   }
+
 
   @override
   bool operator ==(Object other) {
@@ -29,6 +31,7 @@ class HealthItem {
     }
     return other is HealthItem && other.persianName == persianName && other.englishName == englishName;
   }
+
 
   @override
   int get hashCode => Object.hash(englishName, persianName);

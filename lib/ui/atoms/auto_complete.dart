@@ -17,6 +17,7 @@ class AutocompleteBasicUserExample extends StatelessWidget {
 
   static String _displayStringForOption(HealthItem option) => option.persianName;
 
+
   @override
   Widget build(BuildContext context) {
     return Autocomplete<HealthItem>(

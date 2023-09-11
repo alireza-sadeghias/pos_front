@@ -11,6 +11,7 @@ var logger = Logger(printer: LogfmtPrinter());
 class SettingServiceSearch extends StatelessWidget {
   const SettingServiceSearch({super.key});
 
+
   @override
   Widget build(BuildContext context) {
     return SettingServiceTemplate(

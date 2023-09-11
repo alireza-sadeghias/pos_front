@@ -10,6 +10,7 @@ Logger logger = Logger(printer: LogfmtPrinter());
 class Otp extends StatelessWidget {
   const Otp({super.key});
 
+
   @override
   Widget build(BuildContext context) {
     return LoginContainer(
@@ -23,7 +24,7 @@ class Otp extends StatelessWidget {
             Text(
               'رمز یکبار مصرف',
               textAlign: TextAlign.start,
-              style: AviTextStyle.font14.style(PosColors.dimGray),
+              style: TextStyles.font14.style(PosColors.dimGray),
             ),
             const SizedBox(
               height: 40,
@@ -31,7 +32,7 @@ class Otp extends StatelessWidget {
             Text(
               'کد پیامکی که دریافت کردید را اینجا وارد کنید',
               textAlign: TextAlign.right,
-              style: AviTextStyle.font14.style(PosColors.dimGray),
+              style: TextStyles.font14.style(PosColors.dimGray),
             ),
             const SizedBox(
               height: 40,
@@ -58,7 +59,7 @@ class Otp extends StatelessWidget {
                   child: Text(
                     'مرحله بعد',
                     textAlign: TextAlign.right,
-                    style: AviTextStyle.font16.style(PosColors.dimGray),
+                    style: TextStyles.font16.style(PosColors.dimGray),
                   ),
                 ),
               ),

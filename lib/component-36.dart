@@ -3,7 +3,9 @@ import 'package:logger/logger.dart';
 import 'package:pos/ui/token/pos_colors.dart';
 var logger = Logger(printer: LogfmtPrinter());
 class Scene extends StatelessWidget {
-  const Scene({super.key});@override
+  const Scene({super.key});
+
+@override
   Widget build(BuildContext context) {
     double baseWidth = 328;
     double fem = MediaQuery.of(context).size.width / baseWidth;
@@ -13,42 +15,42 @@ class Scene extends StatelessWidget {
       child: Container(
         // component361Y5 (5812:106296)
         width: double.infinity,
-        height: 63*fem,
+        height: 63,
         child: Container(
           // autogroupqusmZZb (BnLQBWMEPvM1pffZnXquSm)
           width: double.infinity,
-          height: 44*fem,
+          height: 44,
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
                 // grouptrm (I5812:106296;5812:106905)
-                margin: EdgeInsets.fromLTRB(0*fem, 2*fem, 129*fem, 0*fem),
-                width: 24*fem,
-                height: 24*fem,
+                margin: EdgeInsets.fromLTRB(0, 2, 129, 0),
+                width: 24,
+                height: 24,
                 child: Image.asset(
                   'assets/pos-final/images/group-WfB.png',
-                  width: 24*fem,
-                  height: 24*fem,
+                  width: 24,
+                  height: 24,
                 ),
               ),
               Container(
                 // group88QaD (I5812:106296;5812:106901)
-                margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 8*fem, 1*fem),
+                margin: EdgeInsets.fromLTRB(0, 0, 8, 1),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Container(
                       // wq3 (I5812:106296;5812:106902)
-                      margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 7*fem),
+                      margin: EdgeInsets.fromLTRB(0, 0, 0, 7),
                       child: Text(
                         'دکتر مریم محمودی',
                         textAlign: TextAlign.right,
                         style: TextStyle (
                       fontFamily:   'IRANSans',
-                          fontSize: 14*ffem,
+                          fontSize: 14,
                           fontWeight: FontWeight.w600,
-                          height: 1.2575*ffem/fem,
+                          height: 1.2575,
                           color: PosColors.dimGray,
                         ),
                       ),
@@ -59,9 +61,9 @@ class Scene extends StatelessWidget {
                       textAlign: TextAlign.right,
                       style: TextStyle (
                       fontFamily: 'IRANSans',
-                        fontSize: 14*ffem,
+                        fontSize: 14,
                         fontWeight: FontWeight.w500,
-                        height: 1.2575*ffem/fem,
+                        height: 1.2575,
                         color: PosColors.dimGray,
                       ),
                     ),
@@ -70,9 +72,9 @@ class Scene extends StatelessWidget {
               ),
               Container(
                 // d5001BDb (I5812:106296;5812:106900)
-                margin: EdgeInsets.fromLTRB(0*fem, 2*fem, 0*fem, 0*fem),
-                width: 40*fem,
-                height: 42*fem,
+                margin: EdgeInsets.fromLTRB(0, 2, 0, 0),
+                width: 40,
+                height: 42,
                 child: Image.asset(
                   'assets/pos-final/images/d-500-1-Deq.png',
                   fit: BoxFit.cover,

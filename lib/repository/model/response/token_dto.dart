@@ -12,6 +12,7 @@ class TokenDto{
 
   Map<String, dynamic> toJson() => {'token':token,'ttl':ttl,'dto':dto};
 
+
   @override
   String toString() {
     return 'FetchDto dto: $dto, ttl: $ttl, token: $token.';
