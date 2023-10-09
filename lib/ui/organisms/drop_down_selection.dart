@@ -38,7 +38,7 @@ class _DropdownMenuState extends State<DropDownSelection> {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      height: 52,
+      height: 48,
       padding: const EdgeInsets.only(left: 10, right: 10, bottom: 4, top: 4),
       decoration: BoxDecoration(
           borderRadius: const BorderRadius.all(Radius.circular(4)),

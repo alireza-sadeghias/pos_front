@@ -15,7 +15,7 @@ class SettingServiceSearch extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SettingServiceTemplate(
-      widget: List.filled(1, DropDownModal()),
+      children: List.filled(1, DropDownModal()),
       bottomButton: BottomButton(
         onPressed: () {},
       ),

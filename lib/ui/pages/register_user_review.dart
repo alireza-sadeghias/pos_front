@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:logger/logger.dart';
 import 'package:pos/ui/atoms/avatar.dart';
+import 'package:pos/ui/atoms/line.dart';
 import 'package:pos/ui/foundation/text_style.dart';
+import 'package:pos/ui/pages/landing_page.dart';
 import 'package:pos/ui/token/pos_colors.dart';
 import '../molecules/login_container.dart';
 
@@ -10,22 +12,15 @@ var logger = Logger(printer: LogfmtPrinter());
 class RegisterInformationReview extends StatelessWidget {
   const RegisterInformationReview({super.key});
 
-
   @override
   Widget build(BuildContext context) {
     return LoginContainer(
-        child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
           const SizedBox(
-            height: 40,
-          ),
-          Text('تایید اطلاعات',
-              textAlign: TextAlign.right,
-              style: TextStyles.font14.style(PosColors.dimGray)),
-          const SizedBox(
-            height: 10,
+            height: 24,
           ),
           Avatar(
             img: Image.asset(
@@ -34,13 +29,13 @@ class RegisterInformationReview extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 10,
+            height: 8,
           ),
           Text('مریم محمودی',
               textAlign: TextAlign.center,
               style: TextStyles.font18.style(PosColors.dimGray)),
           const SizedBox(
-            height: 10,
+            height: 8,
           ),
           Text(
             'مطب دکتر طاهره ابراهیمی زاده',
@@ -50,7 +45,7 @@ class RegisterInformationReview extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 15,
+            height: 8,
           ),
           Text(
             'متخصص زنان و زایمان',
@@ -60,29 +55,11 @@ class RegisterInformationReview extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 10,
+            height: 8,
           ),
-          SizedBox(
-            width: 328,
-            height: 1,
-            child: Container(
-              decoration: const BoxDecoration(
-                color: Color(0xffececec),
-              ),
-            ),
-          ),
+          const Line(),
           const SizedBox(
-            height: 10,
-          ),
-          SizedBox(
-            width: double.maxFinite,
-            child: Text(
-              'نشانی',
-              textAlign: TextAlign.right,
-              style: TextStyles.font14.style(
-                PosColors.dimGray,
-              ),
-            ),
+            height: 8,
           ),
           Text(
             'تهران- آیت الله کاشانی-خ نیرو- کوچه آسمان-پ66 - واحد22',
@@ -92,7 +69,7 @@ class RegisterInformationReview extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 20,
+            height: 16,
           ),
           SizedBox(
             width: double.maxFinite,
@@ -112,7 +89,7 @@ class RegisterInformationReview extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 20,
+            height: 16,
           ),
           SizedBox(
             width: double.maxFinite,
@@ -132,10 +109,16 @@ class RegisterInformationReview extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 50,
+            height: 32,
           ),
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const LandingPage(),
+                ),
+              );
+            },
             style: TextButton.styleFrom(
               padding: EdgeInsets.zero,
             ),
@@ -154,6 +137,8 @@ class RegisterInformationReview extends StatelessWidget {
               ),
             ),
           ),
-        ]));
+        ],
+      ),
+    );
   }
 }

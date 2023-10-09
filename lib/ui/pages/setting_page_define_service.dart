@@ -5,6 +5,7 @@ import 'package:pos/ui/atoms/bottom_button.dart';
 import 'package:pos/ui/molecules/modal_bottom_sheet.dart';
 import 'package:pos/ui/organisms/define_service.dart';
 import 'package:pos/ui/organisms/setting_service_modify_confirmation.dart';
+import 'package:pos/ui/pages/setting_page.dart';
 import 'package:pos/ui/pages/setting_page_service_list.dart';
 import 'package:pos/ui/templates/setting_page_template.dart';
 import 'package:pos/ui/token/pos_colors.dart';
@@ -19,11 +20,10 @@ var logger = Logger(printer: LogfmtPrinter());
 class SettingPageDefineService extends StatelessWidget {
   const SettingPageDefineService({super.key});
 
-
   @override
   Widget build(BuildContext context) {
     return SettingServiceTemplate(
-      widget: List.filled(1, const DefineService()),
+      contentHeight: 0.55,
       bottomButton: BottomButton(
         text: 'تایید',
         textColor: PosColors.white,
@@ -78,7 +78,12 @@ class SettingPageDefineService extends StatelessWidget {
                                                 text: 'تعریف خدمات و تعرفه ها',
                                                 style: TextStyles.font14
                                                     .style(PosColors.dimGray),
-                                                onPressed: () => {},
+                                                onPressed: () => {
+                                                  Navigator.of(context).push(
+                                                      MaterialPageRoute(
+                                                          builder: (context) =>
+                                                              const SettingPage()))
+                                                },
                                               ),
                                             ),
                                           ),
@@ -121,6 +126,7 @@ class SettingPageDefineService extends StatelessWidget {
           );
         },
       ),
+      children: List.filled(1, const DefineService()),
     );
   }
 }

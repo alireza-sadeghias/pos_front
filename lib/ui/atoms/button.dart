@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:pos/ui/foundation/text_style.dart';
 
-import '../token/font.dart';
-
-class Button extends StatelessWidget {
-  const Button({
+class ButtonFactory extends StatelessWidget {
+  const ButtonFactory({
     Key? key,
     this.onPressed,
     this.text,
@@ -12,7 +11,7 @@ class Button extends StatelessWidget {
     this.backgroundColor,
     this.fontSize,
     this.height = 32,
-    this.width=400,
+    this.width = 400,
     this.textAlign = TextAlign.right,
     this.borderRadius,
     this.isEnabled = false,
@@ -29,33 +28,27 @@ class Button extends StatelessWidget {
   final BorderRadius? borderRadius;
   final TextAlign? textAlign;
 
-
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: width,
       height: height,
-      // decoration: BoxDecoration(
-      //   color: backgroundColor,
-      //   borderRadius: borderRadius,
-      // ),
-        child: OutlinedButton(
-          style: OutlinedButton.styleFrom(
-            backgroundColor: backgroundColor,
-          ),
-          onPressed: isEnabled ? onPressed : null,
-          child: Text(
-            text!,
-            textAlign: textAlign,
-            style: SafeGoogleFont(
-              'IRANSans',
-              fontSize: fontSize,
-              fontWeight: FontWeight.w700,
-              height: 1,
-              color: color,
-            ),
+      child: OutlinedButton(
+        style: OutlinedButton.styleFrom(
+          backgroundColor: backgroundColor,
+        ),
+        onPressed: isEnabled ? onPressed : null,
+        child: Text(
+          text!,
+          textAlign: textAlign,
+          style: TextStyles.font.style(
+            color!,
+            size: fontSize!,
+            fontWeight: FontWeight.w700,
+            height: 1,
           ),
         ),
+      ),
     );
   }
 }

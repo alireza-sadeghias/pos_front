@@ -10,7 +10,6 @@ class SwitchButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // width: 350,
       height: 56,
       margin: const EdgeInsets.only(bottom: 20,left: 0,right:0,top:20 ),
       decoration: BoxDecoration(
@@ -51,10 +50,8 @@ class SwitchButton extends StatelessWidget {
             width: 1,
           ),
           Center(
-            // height: double.infinity,
             child: SizedBox(
                 width: 118,
-                // height: 48,
                 child: Container(
                   alignment: AlignmentDirectional.center,
                   decoration: const BoxDecoration(
@@ -69,7 +66,7 @@ class SwitchButton extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: TextStyles.font16.style(PosColors.dimGray),
                   ),
-                )),
+                ),),
           ),
         ],
       ),

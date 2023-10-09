@@ -48,6 +48,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   logger: ^2.0.2
+  provider: ^6.0.5
 
 dev_dependencies:
   flutter_test:
@@ -81,6 +82,9 @@ flutter:
         - asset: assets/fonts/IRANSans_Medium.ttf
         - asset: assets/fonts/IRANSans_UltraLight.ttf
           weight: 700
+    - family: AviIcons
+      fonts:
+        - asset: assets/fonts/avi_icons.otf
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

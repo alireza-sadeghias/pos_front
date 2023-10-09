@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pos/ui/atoms/line.dart';
 
 class RowIcon extends StatelessWidget {
   const RowIcon(
@@ -7,12 +6,15 @@ class RowIcon extends StatelessWidget {
       required this.icon,
       required this.text,
       required this.style,
-      required this.onPressed,
+      this.onPressed,
       this.right = 8,
       this.left = 8,
       this.top = 8,
       this.bottom = 8,
-      this.hasDivider = false});
+      this.hasDivider = false,
+      this.mainAxisSize = MainAxisSize.min,
+      this.crossAxisAlignment = CrossAxisAlignment.start,
+      this.mainAxisAlignment = MainAxisAlignment.start});
 
   final bool hasDivider;
   final Widget? icon;
@@ -23,45 +25,39 @@ class RowIcon extends StatelessWidget {
   final double top;
   final double bottom;
   final VoidCallback? onPressed;
-
+  final MainAxisSize mainAxisSize;
+  final CrossAxisAlignment crossAxisAlignment;
+  final MainAxisAlignment mainAxisAlignment;
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        InkWell(
-          onTap: onPressed!,
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Container(
-                margin: EdgeInsets.only(
-                    right: right, left: left, top: top, bottom: bottom),
-                child: icon,
-              ),
-              Container(
-                margin: const EdgeInsets.only(left: 8),
-                child: Text(
-                  text,
-                  textAlign: TextAlign.right,
-                  style: style,
-                ),
-              ),
-            ],
-          ),
+    return InkWell(
+      onTap: onPressed,
+      child: Container(
+        decoration: BoxDecoration(
+          border: hasDivider
+              ? const Border(
+                  bottom: BorderSide(color: Color(0xffcdcdcd), width: 120))
+              : const Border(),
         ),
-        hasDivider
-            ? const Line(
-                width: 120,
-              )
-            : const Line(
-                width: 0,
-                height: 0,
-              ),
-      ],
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Container(
+              margin: EdgeInsets.only(
+                  right: right, left: left, top: top, bottom: bottom),
+              child: icon,
+            ),
+            Text(
+              text,
+              textAlign: TextAlign.right,
+              style: style,
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

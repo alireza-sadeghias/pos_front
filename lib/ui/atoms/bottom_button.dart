@@ -13,7 +13,9 @@ class BottomButton extends StatelessWidget {
       this.padding = 8,
       this.margin = 16,
       this.radius = 5,
-      required this.onPressed});
+      this.autofocus=true,
+      required this.onPressed,
+      });
 
   final Size size;
   final Color textColor;
@@ -23,6 +25,7 @@ class BottomButton extends StatelessWidget {
   final double padding;
   final double margin;
   final double radius;
+  final bool autofocus;
   final VoidCallback? onPressed;
 
 
@@ -40,6 +43,7 @@ class BottomButton extends StatelessWidget {
       ),
       child: Center(
         child: TextButton(
+          autofocus: autofocus,
           onPressed: onPressed,
           style: ButtonStyle(
               maximumSize: MaterialStateProperty.all(size),

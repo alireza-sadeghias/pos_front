@@ -39,4 +39,5 @@ class ButtonStyles {
       minimumSize: MaterialStateProperty.all(size),
     );
   }
+
 }

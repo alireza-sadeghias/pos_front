@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pos/ui/foundation/text_style.dart';
 
 import '../token/pos_colors.dart';
 import '../token/font.dart';
@@ -27,13 +28,7 @@ class BrandDetail extends StatelessWidget{
           child: Text(
             'آویهنگ',
             textAlign: TextAlign.right,
-            style: SafeGoogleFont(
-              'IRANSans',
-              fontSize: 18,
-              fontWeight: FontWeight.w900,
-              height: 1.3,
-              color: PosColors.white,
-            ),
+            style: TextStyles.font18.style( PosColors.white,fontWeight: FontWeight.w900),
           ),
         ),
       ],

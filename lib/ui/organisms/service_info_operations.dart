@@ -10,7 +10,7 @@ class ServiceInfoOperations extends StatelessWidget {
 
   const ServiceInfoOperations({
     super.key,
-    this.padding = const EdgeInsets.fromLTRB(16, 16, 16, 0),
+    this.padding = const EdgeInsets.fromLTRB(16, 0, 16, 0),
     this.margin = const EdgeInsets.fromLTRB(8, 8, 8, 8),
   });
 
@@ -46,9 +46,7 @@ class ServiceInfoOperations extends StatelessWidget {
               ),
             ],
           ),
-          const Line(
-            bottom: 20,
-          ),
+          const Line(),
           TextRow(
             children: [
               Text(

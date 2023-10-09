@@ -23,13 +23,15 @@ class SettingPageServiceList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SettingServiceTemplate(
-      widget: [
-        settingTitle,
-        ...serviceInfoOperationsList
-      ],
+      hasTitle: false,
+      contentHeight: .70,
       bottomButton: BottomButton(
         onPressed: () {},
       ),
+      children: [
+        settingTitle,
+        ...serviceInfoOperationsList
+      ],
     );
   }
 }

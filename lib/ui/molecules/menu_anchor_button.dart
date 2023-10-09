@@ -32,7 +32,7 @@ class _MenuAnchorButtonState extends State<MenuAnchorButton> {
               controller.open();
             }
           },
-          icon: const Icon(Icons.more_horiz_outlined),
+          icon: const Icon(Icons.more_horiz_outlined,color: PosColors.dimGray),
           tooltip: 'عملیات بیشتر',
         );
       },
@@ -41,7 +41,7 @@ class _MenuAnchorButtonState extends State<MenuAnchorButton> {
         padding: MaterialStatePropertyAll(EdgeInsets.zero),
         alignment: AlignmentDirectional.bottomCenter,
       ),
-      alignmentOffset: const Offset(-100.0, -5),
+      alignmentOffset: const Offset(-120.0,-20),
       menuChildren: List<MenuItemButton>.generate(
         widget.textValues.length,
         (int index) => MenuItemButton(

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
@@ -7,22 +6,19 @@ import 'package:pos/ui/token/pos_colors.dart';
 import '../foundation/number_formats.dart';
 import '../foundation/text_style.dart';
 
-class PriceTextField extends StatefulWidget{
-
+class PriceTextField extends StatefulWidget {
   @override
-  State<StatefulWidget> createState()  => _PriceTextFieldState();
+  State<StatefulWidget> createState() => _PriceTextFieldState();
 
   final String? text;
 
-  const PriceTextField({this.text,super.key});
+  const PriceTextField({this.text, super.key});
 }
 
 class _PriceTextFieldState extends State<PriceTextField> {
-
   int _price = 0;
 
   int get price => _price;
-
 
   @override
   Widget build(BuildContext context) {
@@ -30,21 +26,23 @@ class _PriceTextFieldState extends State<PriceTextField> {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          if(widget.text!=null)
+          if (widget.text != null)
             Text(
-            widget.text!,
-            textAlign: TextAlign.right,
-            style: TextStyles.font16.style(PosColors.dimGray),
-          ),
+              widget.text!,
+              textAlign: TextAlign.right,
+              style: TextStyles.font16.style(PosColors.dimGray),
+            ),
           TextField(
             keyboardType: TextInputType.number,
             inputFormatters: [
               TextInputFormatter.withFunction((oldValue, newValue) {
-                String newText = newValue.text.replaceAll(RegExp(r'[^0-9]'), '');
+                String newText =
+                    newValue.text.replaceAll(RegExp(r'[^0-9]'), '');
                 String value = newText;
                 int cursorPosition = value.length;
                 if (newValue.text.isNotEmpty) {
-                  value = const NumberFormatter().formatCurrency(int.parse(newText));
+                  value = const NumberFormatter()
+                      .formatCurrency(int.parse(newText));
                   cursorPosition = value.length;
                 }
                 return TextEditingValue(
@@ -61,15 +59,14 @@ class _PriceTextFieldState extends State<PriceTextField> {
               ),
               contentPadding: EdgeInsets.symmetric(vertical: 5, horizontal: 5),
               border: OutlineInputBorder(
-                borderRadius: BorderRadius.all(Radius.circular(5))
-              ),
+                  borderRadius: BorderRadius.all(Radius.circular(5))),
             ),
-            onChanged: (value){
+            onChanged: (value) {
               logger.i('on change is $value');
-              setState((){
+              setState(() {
                 String newText = value.replaceAll(RegExp(r'[^0-9]'), '');
                 logger.i('new text is $value');
-                _price = (int.parse(newText))~/10;
+                _price = (int.parse(newText)) ~/ 10;
               });
             },
           ),
@@ -82,32 +79,31 @@ class _PriceTextFieldState extends State<PriceTextField> {
   }
 }
 
-
 class PriceText extends StatelessWidget {
-
-  const PriceText(this.price,{
+  const PriceText(
+    this.price, {
     this.style ,
-    this.customPattern = '#,##0 ¤'  ,
+    this.customPattern = '#,##0 ¤',
     this.locale = "fa_IR",
     this.symbol = "ریال",
     super.key,
   });
 
-  final int price;
+  final int? price;
   final TextStyle? style;
   final String? customPattern;
   final String? locale;
   final String? symbol;
 
-
   @override
   Widget build(BuildContext context) {
-    NumberFormat rialFormat = NumberFormat.currency(
+    NumberFormat priceFormat = NumberFormat.currency(
       customPattern: customPattern,
       locale: locale,
       symbol: symbol,
     );
 
-    return Text(style:style,rialFormat.format(price));
+    return Text(style: style ?? TextStyles.font14.style(PosColors.dimGray), priceFormat.format(price ?? 0));
   }
+
 }

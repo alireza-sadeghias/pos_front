@@ -240,7 +240,7 @@ class Scene extends StatelessWidget {
                           fontSize: 14,
                           fontWeight: FontWeight.w600,
                           height: 1.2575,
-                          color: Color(0xff8f5aff),
+                          color: Color(0x166117ff),
                         ),
                       ),
                     ),

@@ -23,10 +23,7 @@ class UserInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return LandingPageContainer(
             body: body,
-            logo: Image.asset(
-              'assets/pos-final/images/logo.png',
-              fit: BoxFit.cover,
-            ),
+            avatar: const AssetImage('assets/pos-final/images/user_avatar_female.png'),
             headers: [
               Text("دکتر مریم محمودی",
                   style: TextStyles.font18.style(PosColors.dimGray)),

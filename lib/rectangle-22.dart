@@ -5,8 +5,6 @@ class Scene extends StatelessWidget {
 
 @override
   Widget build(BuildContext context) {
-    double baseWidth = 261;
-    double fem = MediaQuery.of(context).size.width / baseWidth;
     return Container(
       width: double.infinity,
       child: Container(

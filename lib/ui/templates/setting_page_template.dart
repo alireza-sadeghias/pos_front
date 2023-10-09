@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:logger/logger.dart';
-import 'package:pos/ui/atoms/bottom_button.dart';
 import 'package:pos/ui/molecules/menu_anchor_button.dart';
 import 'package:pos/ui/molecules/top_action_menu.dart';
 import 'package:pos/ui/pages/landing_page.dart';
@@ -19,25 +18,47 @@ class SettingServiceTemplate extends StatelessWidget {
 
   const SettingServiceTemplate({
     super.key,
-    required this.widget,
+    required this.children,
     required this.bottomButton,
+    this.headerWidget,
     this.hasOption = true,
-    this.title ='تنظیمات',
+    this.hasTitle = true,
+    this.titleColor = PosColors.gray,
+    this.descriptionColor = PosColors.gray,
+    this.title = 'تنظیمات',
+    this.description = '',
+    this.contentHeight = .70,
+    this.collapsedHeight = 90,
+    this.expandedHeight = 90,
+    this.mainAxisAlignment = MainAxisAlignment.start,
+    this.mainAxisSize = MainAxisSize.min,
+    this.crossAxisAlignment = CrossAxisAlignment.start,
   });
 
-  final List<Widget> widget;
-  final BottomButton bottomButton;
+  final Widget? headerWidget;
+  final List<Widget> children;
+  final Color titleColor;
+  final Color descriptionColor;
+  final Widget bottomButton;
   final String title;
+  final double  expandedHeight;
+  final String description;
   final bool hasOption;
+  final double collapsedHeight;
+  final double contentHeight;
+  final bool hasTitle;
+  final MainAxisAlignment mainAxisAlignment;
+  final MainAxisSize mainAxisSize;
+  final CrossAxisAlignment crossAxisAlignment;
 
   @override
   Widget build(BuildContext context) {
-
+    logger.i('headerWidget is: ${headerWidget ?? "isnull"} $headerWidget');
     List<ActionItemContent> textValues = [
       ActionItemContent(
         'جست و جو',
         Icons.search_outlined,
-            () {
+        () {
           Navigator.push(
             context,
             MaterialPageRoute(
@@ -49,75 +70,115 @@ class SettingServiceTemplate extends StatelessWidget {
       ActionItemContent(
         'خدمت جدید',
         Icons.add_box_outlined,
-            () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const SettingPageDefineService(),
-                ),
-              );
-            },
+        () {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const SettingPageDefineService(),
+            ),
+          );
+        },
       ),
       ActionItemContent(
         'حذف',
         Icons.delete_forever_outlined,
-            () {},
+        () {},
       ),
     ];
-    return Directionality(
-      textDirection: TextDirection.rtl,
-      child: UserInfo(
-        body: Stack(
-          children: [
-            SingleChildScrollView(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    width: double.infinity,
-                    padding:
-                        const EdgeInsets.only(top: 16, right: 16, left: 16),
-                    margin: const EdgeInsets.only(top: 32, bottom: 16),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        ...widget,
-                        const SizedBox(
-                          height: 60,
-                        )
-                      ],
-                    ),
+
+    return UserInfo(
+      body: CustomScrollView(
+        slivers: [
+          hasTitle
+              ? SliverAppBar(
+                  pinned: true,
+                  floating: true,
+                  titleSpacing: 0,
+                  collapsedHeight: collapsedHeight,
+                  expandedHeight: expandedHeight,
+                  backgroundColor: PosColors.white,
+                  leadingWidth: 0,
+                  actions: hasOption?[
+                    MenuAnchorButton(textValues: textValues),
+                  ]:[],
+                  flexibleSpace: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      hasTitle
+                          ? Container(
+                              height: 90,
+                              decoration: const BoxDecoration(
+                                color: PosColors.transparent,
+                              ),
+                              padding: const EdgeInsets.only(
+                                  top: 0, bottom: 0, left: 16, right: 16),
+                              margin: const EdgeInsets.all(0),
+                              child: TopActionMenu(
+                                hasOption: hasOption,
+                                title: title,
+                                description: description,
+                                titleColor: titleColor,
+                                descriptionColor: PosColors.gray,
+                              ),
+                            )
+                          : const SizedBox(),
+                      headerWidget != null
+                          ? Container(
+                              height: 40,
+                              width: double.maxFinite,
+                              decoration: const BoxDecoration(
+                                color: PosColors.transparent,
+                              ),
+                              padding: const EdgeInsets.only(
+                                  top: 0, bottom: 0, left: 16, right: 16),
+                              margin: const EdgeInsets.all(0),
+                              child: headerWidget,
+                            )
+                          : const SizedBox(),
+                    ],
                   ),
-                ],
-              ),
+                )
+              : const PrepareChildSilvers(height: 0, children: []),
+          PrepareChildSilvers(height: contentHeight, children: children),
+          SliverToBoxAdapter(
+            child: bottomButton,
+          ),
+        ],
+      ),
+      onPressed: () => {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const LandingPage(),
+          ),
+        )
+      },
+    );
+  }
+}
+
+class PrepareChildSilvers extends StatelessWidget {
+  const PrepareChildSilvers(
+      {Key? key, required this.children, this.height = 0.55})
+      : super(key: key);
+
+  final List<Widget> children;
+  final double height;
+
+  @override
+  Widget build(BuildContext context) {
+    return SliverToBoxAdapter(
+      child: Builder(
+        builder: (BuildContext context) {
+          return Container(
+            height: MediaQuery.of(context).size.height * height,
+            color: PosColors.white,
+            child: ListView.builder(
+              itemCount: children.length,
+              itemBuilder: (context, index) => children[index],
             ),
-            Container(
-              decoration: const BoxDecoration(
-                color: PosColors.background,
-              ),
-              padding: const EdgeInsets.only(left: 32, right: 16),
-              child: TopActionMenu(
-                hasOption: hasOption,
-                text: title,
-                iconWidget: MenuAnchorButton(textValues: textValues),
-              ),
-            ),
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: Padding(
-                padding: const EdgeInsets.only(top: 16, left: 16, right: 16),
-                child: bottomButton,
-              ),
-            ),
-          ],
-        ),
-        onPressed: () => {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const LandingPage(),
-            ),
-          )
+          );
         },
       ),
     );

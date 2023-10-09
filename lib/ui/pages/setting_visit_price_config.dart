@@ -22,20 +22,7 @@ class SettingVisitPriceConfig extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SettingServiceTemplate(
-      widget: [
-        RowIcon(
-            icon: Image.asset(
-              'assets/pos-final/images/message-edit-linear.png',
-              width: 20,
-              height: 20,
-            ),
-            top: 0,
-            bottom: 16,
-            text: 'تعیین حق ویزیت',
-            style: TextStyles.font16.style(PosColors.dimGray),
-            onPressed: () => {}),
-        const PriceTextField(),
-      ],
+      contentHeight : .55,
       bottomButton: BottomButton(
         text: 'تایید',
         textColor: PosColors.white,
@@ -82,6 +69,20 @@ class SettingVisitPriceConfig extends StatelessWidget {
           );
         },
       ),
+      children: [
+        RowIcon(
+            icon: Image.asset(
+              'assets/pos-final/images/message-edit-linear.png',
+              width: 20,
+              height: 20,
+            ),
+            top: 0,
+            bottom: 16,
+            text: 'تعیین حق ویزیت',
+            style: TextStyles.font16.style(PosColors.dimGray),
+            onPressed: () => {}),
+        const PriceTextField(),
+      ],
     );
   }
 }

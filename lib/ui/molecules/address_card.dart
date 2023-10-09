@@ -2,12 +2,18 @@ import 'package:flutter/cupertino.dart';
 import 'package:pos/ui/foundation/text_style.dart';
 import 'package:pos/ui/token/pos_colors.dart';
 
-class AddressCard extends StatelessWidget {
-  const AddressCard({required this.address, required this.isSelected, super.key});
+class AddressCard extends StatefulWidget {
+  const AddressCard(
+      {required this.address, required this.isSelected, super.key});
 
   final String address;
   final bool isSelected;
 
+  @override
+  State createState() =>  _AddressCardState();
+}
+//
+class _AddressCardState extends State<AddressCard>{
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +22,7 @@ class AddressCard extends StatelessWidget {
       width: 328,
       decoration: BoxDecoration(
         border: Border.all(
-            color: isSelected ? PosColors.darkViolet : PosColors.azureGray),
+            color: widget.isSelected ? PosColors.darkViolet : PosColors.azureGray),
         color: PosColors.deepGray,
         borderRadius: BorderRadius.circular(8),
         boxShadow: const [
@@ -36,11 +42,11 @@ class AddressCard extends StatelessWidget {
             child: RichText(
               textAlign: TextAlign.right,
               text: TextSpan(
-                style: TextStyles.font14.style(isSelected ? PosColors.darkViolet : PosColors.azureGray,),
+                style: TextStyles.font14.style(widget.isSelected ? PosColors.darkViolet : PosColors.azureGray,),
                 children: [
                   TextSpan(
-                    text: address,
-                    style: TextStyles.font14.style(isSelected? PosColors.darkViolet: PosColors.azureGray,),
+                    text: widget.address,
+                    style: TextStyles.font14.style(widget.isSelected? PosColors.darkViolet: PosColors.azureGray,),
                   ),
                 ],
               ),

@@ -3,39 +3,82 @@ import 'package:flutter/material.dart';
 import '../atoms/otp_input_cell.dart';
 
 class OtpRow extends StatefulWidget {
-  const OtpRow({Key? key}) : super(key: key);
+  OtpRow({Key? key, this.count = 6}) : super(key: key);
 
+  final int count;
 
   @override
   State<OtpRow> createState() => _OtpRowState();
 
+  final OtpModel otpModel = OtpModel();
+
+  String get otp => otpModel.value;
 }
 
 class _OtpRowState extends State<OtpRow> {
+  late List<TextEditingController> controllers = [];
+  late List<OtpInput> inputs;
+  late List<String> otpStringField;
+  late List<FocusNode> focusNodes;
+  late List<ValueChanged<String>> callBacks;
 
-  final TextEditingController _fieldOne = TextEditingController();
-  final TextEditingController _fieldTwo = TextEditingController();
-  final TextEditingController _fieldThree = TextEditingController();
-  final TextEditingController _fieldFour = TextEditingController();
-  final TextEditingController _fieldFive = TextEditingController();
-  final TextEditingController _fieldSix = TextEditingController();
+  @override
+  void initState() {
+    super.initState();
+    otpStringField = List.filled(widget.count, '');
 
+    controllers =
+        List.generate(widget.count, (index) => TextEditingController());
+
+    focusNodes = List.generate(widget.count, (index) => FocusNode()).reversed.toList();
+
+    callBacks = List.generate(
+        widget.count,
+        (index) => (value) {
+              otpStringField[index] = value;
+              if (value.isNotEmpty && index < widget.count - 1) {
+                FocusScope.of(context).requestFocus(focusNodes[index + 1]);
+              } else if (value.isEmpty){
+                FocusScope.of(context).requestFocus(focusNodes[index > 0 ?index-1:0]);
+              }
+              widget.otpModel.value = otp;
+            });
+
+    inputs = List.generate(
+        widget.count,
+        (index) => OtpInput(
+            controller: controllers[index],
+            focusNode: focusNodes[index],
+            onValueChanged: callBacks[index],
+            autoFocus: index == 0 ? true : false));
+
+    widget.otpModel.value = otp;
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
-        OtpInput(_fieldOne, true), // auto focus
-        OtpInput(_fieldTwo, false),
-        OtpInput(_fieldThree, false),
-        OtpInput(_fieldFour, false),
-        OtpInput(_fieldFive, false),
-        OtpInput(_fieldSix, false),
-      ],
+    return Material(
+     child:Row(
+         mainAxisSize: MainAxisSize.max,
+         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+         children: inputs.reversed.toList(),
+     ),
     );
   }
 
-  String get otp => _fieldOne.text + _fieldTwo.text + _fieldThree.text + _fieldFour.text + _fieldFive.text + _fieldSix.text;
+  String get otp {
+    var otpValue = otpStringField.join();
+    logger.i('Concatenated OTP: $otpValue');
+    return otpStringField.join();
+  }
+}
 
+class OtpModel {
+  late String _value;
+
+  String get value => _value;
+
+  set value(String value) {
+    _value = value;
+  }
 }

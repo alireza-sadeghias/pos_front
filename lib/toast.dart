@@ -27,7 +27,6 @@ class Toast extends StatelessWidget {
   final Color? borderColor;
   final IconData? icon; //Color(0xff4ade80)
 
-
   @override
   Widget build(BuildContext context) {
     return Directionality(
@@ -162,10 +161,98 @@ class Toast extends StatelessWidget {
     }
   }
 
+  static void showError(
+    BuildContext context, {
+    String? titleMessage = 'خطا!',
+    String? description,
+    IconData? icon = Icons.check_circle_outline,
+    Color? iconColor = PosColors.darkShadeRed,
+    Color? backgroundColor = PosColors.orange,
+    Color? borderColor = PosColors.maroon,
+    Color? titleColor = PosColors.darkShadeRed,
+    Color? descriptionColor = PosColors.darkRed,
+    Duration? duration = const Duration(seconds: 5),
+  }) {
+    OverlayState overlayState = Overlay.of(context);
+    OverlayEntry overlayEntry;
+    overlayEntry = OverlayEntry(
+      builder: (BuildContext context) => Positioned(
+          bottom: MediaQuery.of(context).size.height * 0.05,
+          left: MediaQuery.of(context).size.width * 0.05,
+          right: MediaQuery.of(context).size.width * 0.05,
+          child: Directionality(
+            textDirection: TextDirection.rtl,
+            child: Material(
+              color: Colors.transparent,
+              child: Container(
+                padding: const EdgeInsets.all(8),
+                margin: const EdgeInsets.all(12),
+                width: double.infinity,
+                height: 48 +
+                    ((description == null || description.isEmpty) ? 0 : 48),
+                decoration: BoxDecoration(
+                  border: Border.all(color: borderColor!),
+                  color: backgroundColor,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: SizedBox(
+                  width: double.infinity,
+                  height: double.infinity,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    textDirection: TextDirection.rtl,
+                    children: [
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Icon(
+                            icon,
+                            color: iconColor,
+                          ),
+                          Container(
+                            margin: const EdgeInsets.fromLTRB(0, 0, 4, 0),
+                            child: Text(
+                              titleMessage!,
+                              textAlign: TextAlign.right,
+                              style: TextStyles.font14.style(
+                                titleColor!,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 4,
+                      ),
+                      if (description != null && description.isNotEmpty)
+                        Text(
+                          description,
+                          textAlign: TextAlign.right,
+                          style: TextStyles.font14.style(
+                            descriptionColor!,
+                          ),
+                        ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          )),
+    );
+
+    overlayState.insert(overlayEntry);
+
+    if (duration != null) {
+      Future.delayed(duration, () {
+        overlayEntry.remove();
+      });
+    }
+  }
+
   static void showSuccess(
     BuildContext context, {
     String? titleMessage = 'عملیات موفق آمیز بود!',
-    required String? description,
+    String? description,
     IconData? icon = Icons.check_circle_outline,
     Color? iconColor = PosColors.success,
     Color? backgroundColor = PosColors.darkShadeGreen,
@@ -176,60 +263,64 @@ class Toast extends StatelessWidget {
   }) {
     OverlayState overlayState = Overlay.of(context);
     OverlayEntry overlayEntry;
-
     overlayEntry = OverlayEntry(
       builder: (BuildContext context) => Positioned(
         bottom: MediaQuery.of(context).size.height * 0.05,
         left: MediaQuery.of(context).size.width * 0.05,
         right: MediaQuery.of(context).size.width * 0.05,
-        child: Material(
-          color: Colors.transparent,
-          child: Container(
-            padding: const EdgeInsets.all(12),
-            margin: const EdgeInsets.all(12),
-            width: double.infinity,
-            height: 80,
-            decoration: BoxDecoration(
-              border: Border.all(color: borderColor!),
-              color: backgroundColor,
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: SizedBox(
+        child: Directionality(
+          textDirection: TextDirection.rtl,
+          child: Material(
+            color: Colors.transparent,
+            child: Container(
+              padding: const EdgeInsets.all(12),
+              margin: const EdgeInsets.all(12),
               width: double.infinity,
-              height: double.infinity,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Icon(
-                        icon,
-                        color: iconColor,
-                      ),
-                      Container(
-                        margin: const EdgeInsets.fromLTRB(0, 0, 8, 0),
-                        child: Text(
-                          titleMessage!,
-                          textAlign: TextAlign.right,
-                          style: TextStyles.font14.style(
-                            titleColor!,
+              height:
+                  48 + ((description == null || description.isEmpty) ? 0 : 48),
+              decoration: BoxDecoration(
+                border: Border.all(color: borderColor!),
+                color: backgroundColor,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: SizedBox(
+                width: double.infinity,
+                height: double.infinity,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  textDirection: TextDirection.rtl,
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Icon(
+                          icon,
+                          color: iconColor,
+                        ),
+                        Container(
+                          margin: const EdgeInsets.fromLTRB(0, 0, 8, 0),
+                          child: Text(
+                            titleMessage!,
+                            textAlign: TextAlign.right,
+                            style: TextStyles.font14.style(
+                              titleColor!,
+                            ),
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 4,
-                  ),
-                  Text(
-                    description!,
-                    textAlign: TextAlign.right,
-                    style: TextStyles.font14.style(
-                      descriptionColor!,
+                      ],
                     ),
-                  ),
-                ],
+                    const SizedBox(
+                      height: 4,
+                    ),
+                    Text(
+                      description!,
+                      textAlign: TextAlign.right,
+                      style: TextStyles.font14.style(
+                        descriptionColor!,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),

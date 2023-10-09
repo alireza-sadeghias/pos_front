@@ -4,6 +4,7 @@ import 'package:logger/logger.dart';
 import 'package:pos/ui/organisms/drop_down_selection.dart';
 import 'package:pos/ui/foundation/text_style.dart';
 import 'package:pos/ui/molecules/login_container.dart';
+import 'package:pos/ui/pages/edit_address.dart';
 import 'package:pos/ui/token/pos_colors.dart';
 
 const List<String> nameOfNezamList = <String>[
@@ -29,7 +30,7 @@ class SignUp extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(
-              height: 40,
+              height: 20,
             ),
             Text(
               'لطفا اطلاعات خود را کامل کنید',
@@ -37,7 +38,7 @@ class SignUp extends StatelessWidget {
               style: TextStyles.font16.style(PosColors.dimGray),
             ),
             const SizedBox(
-              height: 20,
+              height: 15,
             ),
             Text(
               'شماره ملی',
@@ -63,7 +64,7 @@ class SignUp extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 20,
+              height: 15,
             ),
             Text(
               'شماره همراه',
@@ -89,7 +90,7 @@ class SignUp extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 20,
+              height: 15,
             ),
             Text(
               'نوع نظام',
@@ -100,7 +101,7 @@ class SignUp extends StatelessWidget {
                 // ,items: nameOfNezamList
                 ),
             const SizedBox(
-              height: 20,
+              height: 15,
             ),
             Text(
               'شماره نظام پزشکی',
@@ -125,10 +126,17 @@ class SignUp extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 60,
+              height: 20,
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const EditAddress(addressInfo: {}),
+                  ),
+                );
+              },
               style: TextButton.styleFrom(
                 padding: EdgeInsets.zero,
               ),

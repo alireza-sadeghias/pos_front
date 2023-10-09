@@ -4,7 +4,15 @@ abstract final class PosColors {
 
   PosColors._(); // it is private constructor that can only be called from it self
 
+
+
   static const background = Color(0xffffffff);
+  static const transparent = Colors.transparent;
+  static const borderColor = Color(0xffd4d4d4);
+  static const midnightBlue = Color(0xff12202f);
+  static const midnightShadeBlue = Color(0xff191970);
+  static const selectionColor = Color(0xff8f5aff);
+  static const successColor = Color(0xFF4CAF50);
 
   // Grays
   static const dimGray = Color(0xff717171);
@@ -13,7 +21,6 @@ abstract final class PosColors {
   static const darkGray = Color(0xffa9a9a9);
   static const lightGray = Color(0xffd3d3d3);
   static const darkCharcoal = Color(0xff515151);
-  static const mediumDarkShadeBlue = Color(0xff3568d4);
   static const silver = Color(0xffc0c0c0);
   static const azureGray = Color(0xff5e5e5e);
   static const mediumGray = Color(0xff808080);
@@ -30,15 +37,19 @@ abstract final class PosColors {
   static const floralWhite = Color(0xfffffaf0);
   static const azureWhite = Color(0xfff0ffff);
 
-
   // Reds
   static const cinnabar = Color(0xfff0552a);
   static const vermilion = Color(0xffef4023);
   static const brightShadeRed = Color(0xffe80303);
   static const crimson = Color(0xffdc143c);
+  static const darkShadeRed = Color(0xFFD50000);
   static const fireBrick = Color(0xffb22222);
   static const indianRed = Color(0xffcd5c5c);
   static const darkRed = Color(0xff8b0000);
+  static const tomato = Color(0xffff6347);
+  static const red = Color(0xffff0000);
+  static const orangeRed = Color(0xffff4500);
+  static const orangeRed100 = Color(0x11ff0000);
 
   // Blues
   static const dodgerBlue = Color(0xff1e90ff);
@@ -46,12 +57,14 @@ abstract final class PosColors {
   static const royalBlue = Color(0xff4169e1);
   static const mediumBlue = Color(0xff0000cd);
   static const navyBlue = Color(0xff000080);
+  static const mediumDarkShadeBlue = Color(0xff3568d4);
+  static const mediumLightShadeBlue = Color(0xff3187E3);
 
   // Greens
   static const limeGreen = Color(0xff32cd32);
   static const mediumSeaGreen = Color(0xff3cb371);
   static const oliveDrab = Color(0xff6b8e23);
-  static const darkShadeGreen = Color(0xbe37c860);
+  static const darkShadeGreen = Color(0xbe021807);
   static const mediumDarkShadeGreen = Color(0x1437c860);
   static const success = Color(0xff4ade80);
   static const forestGreen = Color(0xff228b22);
@@ -85,6 +98,7 @@ abstract final class PosColors {
   static const peru = Color(0xffcd853f);
   static const chocolate = Color(0xffd2691e);
   static const maroon = Color(0xff800000);
+  static const brown = Color(0xffa52a2a);
 
   // Pinks
   static const hotPink = Color(0xffff69b4);
@@ -112,7 +126,6 @@ abstract final class PosColors {
   // Aquamarine
   static const aquamarine = Color(0xff7fffd4);
 
-
   // Pink
   static const pink = Color(0xffffc0cb);
 
@@ -136,23 +149,22 @@ abstract final class PosColors {
   static const bisque = Color(0xffffe4c4);
   static const blanchedAlmond = Color(0xffffebcd);
   static const blue = Color(0xff0000ff);
-  static const brown = Color(0xffa52a2a);
   static const burlyWood = Color(0xffdeb887);
   static const cadetBlue = Color(0xff5f9ea0);
   static const chartreuse = Color(0xff7fff00);
   static const coral = Color(0xffff7f50);
-  static const cornsilk = Color(0xfffff8dc);
+  static const cornSilk = Color(0xfffff8dc);
   static const darkBlue = Color(0xff00008b);
   static const darkGoldenRod = Color(0xffb8860b);
   static const darkOliveGreen = Color(0xff556b2f);
-  static const darklmon = Color(0xffe9967a);
+  static const darkLemon = Color(0xffe9967a);
   static const darkSeaGreen = Color(0xff8fbc8f);
   static const darkSlateBlue = Color(0xff483d8b);
   static const darkTurquoise = Color(0xff00ced1);
   static const darkViolet = Color(0xff9400d3);
   static const deepSkyBlue = Color(0xff00bfff);
   static const fuchsia = Color(0xffff00ff);
-  static const gainsboro = Color(0xffdcdcdc);
+  static const gainsBoro = Color(0xffdcdcdc);
   static const ghostWhite = Color(0xfff8f8ff);
   static const green = Color(0xff008000);
   static const greenYellow = Color(0xffadff2f);
@@ -177,7 +189,6 @@ abstract final class PosColors {
   static const mediumSlateBlue = Color(0xff7b68ee);
   static const mediumSpringGreen = Color(0xff00fa9a);
   static const mediumTurquoise = Color(0xff48d1cc);
-  static const midnightBlue = Color(0xff191970);
   static const mintCream = Color(0xfff5fffa);
   static const mistyRose = Color(0xffffe4e1);
   static const moccasin = Color(0xffffe4b5);
@@ -186,7 +197,6 @@ abstract final class PosColors {
   static const navyLight = Color(0xff3a2cd8);
   static const oldLace = Color(0xfffdf5e6);
   static const olive = Color(0xff808000);
-  static const orangeRed = Color(0xffff4500);
   static const paleGreen = Color(0xff98fb98);
   static const paleTurquoise = Color(0xffafeeee);
   static const papayaWhip = Color(0xffffefd5);
@@ -195,7 +205,6 @@ abstract final class PosColors {
   static const powderBlue = Color(0xffb0e0e6);
   static const purple = Color(0xff800080);
   static const rebeccaPurple = Color(0xff663399);
-  static const red = Color(0xffff0000);
   static const rosyBrown = Color(0xffbc8f8f);
   static const salmon = Color(0xfffa8072);
   static const seaGreen = Color(0xff2e8b57);
@@ -206,7 +215,6 @@ abstract final class PosColors {
   static const steelBlue = Color(0xff4682b4);
   static const tan = Color(0xffd2b48c);
   static const thistle = Color(0xffd8bfd8);
-  static const tomato = Color(0xffff6347);
   static const turquoise = Color(0xff40e0d0);
   static const wheat = Color(0xfff5deb3);
   static const whiteSmoke = Color(0xfff5f5f5);

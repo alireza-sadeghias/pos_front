@@ -34,8 +34,9 @@ class IpAddressUtility {
 }
 
 class NationalNumberUtility {
-  static bool isValidIranianNationalNumber(String input) {
-    if (input == null || input.length != 10 || !input.contains(RegExp(r'^\d{10}$'))) {
+  static bool isValid(String input) {
+    logger.i('national number is: $input');
+    if (input.length != 10 || !input.contains(RegExp(r'^\d{10}$'))) {
       return false;
     }
 
@@ -62,10 +63,10 @@ void main() async {
   // String val = await IpAddressUtility.getLocalIpAddress();
   // logger.i(val);
   // Test the function with some examples
-  logger.i('is valid ${NationalNumberUtility.isValidIranianNationalNumber('0430003218')}'); // Should return false
-  logger.i('is valid ${NationalNumberUtility.isValidIranianNationalNumber('1111111111')}'); // Should return true
-  logger.i('is valid ${NationalNumberUtility.isValidIranianNationalNumber('0084710152')}'); // Should return false
-  logger.i('is valid ${NationalNumberUtility.isValidIranianNationalNumber('0439096650')}'); // Should return false
-  logger.i('is valid ${NationalNumberUtility.isValidIranianNationalNumber('2222222222')}'); // Should return false
-  logger.i('is valid ${NationalNumberUtility.isValidIranianNationalNumber('2222222211')}'); // Should return false
+  logger.i('is valid ${NationalNumberUtility.isValid('0430003218')}'); // Should return false
+  logger.i('is valid ${NationalNumberUtility.isValid('1111111111')}'); // Should return true
+  logger.i('is valid ${NationalNumberUtility.isValid('0084710152')}'); // Should return false
+  logger.i('is valid ${NationalNumberUtility.isValid('0439096650')}'); // Should return false
+  logger.i('is valid ${NationalNumberUtility.isValid('2222222222')}'); // Should return false
+  logger.i('is valid ${NationalNumberUtility.isValid('2222222211')}'); // Should return false
 }
